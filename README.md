@@ -89,9 +89,9 @@ introduction-to-commutative-algebra/
 
 ## 下载PDF / Download PDF
 
-你可以在本仓库的[这里](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra)下载最新编译好的PDF文件。
+你可以在本仓库的[这里](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra/blob/main/main.pdf)下载最新编译好的PDF文件。
 
-You can download the latest compiled PDF file from [here](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra) of this repository.
+You can download the latest compiled PDF file from [here](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra/blob/main/main.pdf) of this repository.
 
 ---
 
@@ -123,9 +123,7 @@ You can donate by scanning the QR code with WeChat or Alipay:
 
 | 微信支付 / WeChat Pay | 支付宝 / Alipay |
 |----------------------|-----------------|
-| <img width="1280" height="1741" alt="33cbf63064ab37fe340505fcd149b1d2_720" src="https://github.com/user-attachments/assets/dee2c09a-b5e6-403d-8977-e7fcb99010f7" />
- | <img width="1260" height="1890" alt="949d2b5ab41b91f2f4e318e486c96886_720" src="https://github.com/user-attachments/assets/67ed9d86-049f-497c-b44c-7acaefbf3efe" />
- |
+| <img width="300" height="200" alt="33cbf63064ab37fe340505fcd149b1d2_720" src="https://github.com/user-attachments/assets/dee2c09a-b5e6-403d-8977-e7fcb99010f7" /> | <img width="300" height="200" alt="949d2b5ab41b91f2f4e318e486c96886_720" src="https://github.com/user-attachments/assets/67ed9d86-049f-497c-b44c-7acaefbf3efe" /> |
 
 ---
 
