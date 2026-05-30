@@ -1,0 +1,62 @@
+\contentsline {chapter}{重排前言}{iii}{Doc-Start}%
+\contentsline {chapter}{Introduction}{1}{chapter*.3}%
+\contentsline {chapter}{Notation and Terminology}{5}{chapter*.5}%
+\contentsline {chapter}{\numberline {1}Rings and Ideals}{7}{chapter.1}%
+\contentsline {section}{Rings and Ring Homomorphisms}{7}{section*.6}%
+\contentsline {section}{Ideals. Quotient Rings}{8}{Item.11}%
+\contentsline {section}{Zero-Divisors. Nilpotent Elements. Units}{9}{proposition.1.1}%
+\contentsline {section}{Prime Ideals and Maximal Ideals}{9}{Item.14}%
+\contentsline {section}{Nilradical and Jacobson Radical}{11}{Item.19}%
+\contentsline {section}{Operations on Ideals}{13}{proposition.1.9}%
+\contentsline {section}{Extension and Contraction}{17}{proposition.1.16}%
+\contentsline {section}{Exercises}{18}{exercise.1.18}%
+\contentsline {chapter}{\numberline {2}Modules}{27}{chapter.2}%
+\contentsline {section}{Modules and Module Homomorphisms}{27}{section*.7}%
+\contentsline {section}{Submodules and Quotient Modules}{29}{thmt@dummyctr.dummy.26}%
+\contentsline {section}{Operations on Submodules}{29}{thmt@dummyctr.dummy.26}%
+\contentsline {section}{Direct Sum and Product}{30}{Item.108}%
+\contentsline {section}{Finitely Generated Modules}{31}{Item.108}%
+\contentsline {section}{Exact Sequences}{33}{proposition.2.8}%
+\contentsline {section}{Tensor Product of Modules}{35}{proposition.2.11}%
+\contentsline {section}{Restriction and extension of scalars}{39}{exercise.2.15}%
+\contentsline {section}{Exactness Properties of the Tensor Product}{39}{proposition.2.17}%
+\contentsline {section}{Algebras}{41}{exercise.2.20}%
+\contentsline {section}{Tensor Product of Algebras}{42}{Item.126}%
+\contentsline {section}{Exercises}{43}{Item.126}%
+\contentsline {chapter}{\numberline {3}Rings and Modules of Fractions}{49}{chapter.3}%
+\contentsline {section}{Local Properties}{54}{proposition.3.7}%
+\contentsline {section}{Extended and Contracted Ideals in Rings of Fractions}{55}{Item.189}%
+\contentsline {section}{Exercises}{58}{proposition.3.16}%
+\contentsline {chapter}{\numberline {4}Primary Decomposition}{67}{chapter.4}%
+\contentsline {section}{Exercises}{72}{thmt@dummyctr.dummy.90}%
+\contentsline {chapter}{\numberline {5}Integral Dependence and Valuations}{79}{chapter.5}%
+\contentsline {section}{Integral Dependence}{79}{section*.18}%
+\contentsline {section}{The Going-Up Theorem}{81}{proposition.5.6}%
+\contentsline {section}{eIntegrally Closed Integral Domains. The Going-Down Theorem}{83}{theorem.5.11}%
+\contentsline {section}{Valuation Rings}{86}{proposition.5.17}%
+\contentsline {section}{Exercises}{89}{corollary.5.24}%
+\contentsline {chapter}{\numberline {6}Chain Conditions}{99}{chapter.6}%
+\contentsline {section}{Exercises}{104}{corollary.6.11}%
+\contentsline {chapter}{\numberline {7}Noetherian Rings}{107}{chapter.7}%
+\contentsline {section}{Primary Decomposition in Noetherian Rings}{110}{corollary.7.10}%
+\contentsline {section}{Exercises}{112}{proposition.7.17}%
+\contentsline {chapter}{\numberline {8}Artin Rings}{119}{chapter.8}%
+\contentsline {section}{Exercises}{122}{thmt@dummyctr.dummy.159}%
+\contentsline {chapter}{\numberline {9}Discrete Valuation Rings and Dedekind Domains}{125}{chapter.9}%
+\contentsline {section}{Discrete Valuation Rings}{126}{proposition.9.1}%
+\contentsline {section}{Dedekind Domains}{127}{Item.522}%
+\contentsline {section}{Fractional Ideals}{129}{thmt@dummyctr.dummy.167}%
+\contentsline {section}{Exercises}{131}{Item.534}%
+\contentsline {chapter}{\numberline {10}Completions}{135}{chapter.10}%
+\contentsline {section}{Topologies and Completions}{136}{section*.34}%
+\contentsline {section}{Filtrations}{141}{Item.549}%
+\contentsline {section}{Graded Rings and Modules}{142}{lemma.10.6}%
+\contentsline {section}{The Associated Graded Ring}{147}{corollary.10.21}%
+\contentsline {section}{Exercises}{150}{corollary.10.27}%
+\contentsline {chapter}{\numberline {11}Dimension Theory}{155}{chapter.11}%
+\contentsline {section}{Hilbert Functions}{155}{section*.39}%
+\contentsline {section}{Dimension Theory of Noetherian Local Rings}{159}{proposition.11.6}%
+\contentsline {section}{Regular Local Rings}{163}{corollary.11.21}%
+\contentsline {section}{Transcendental Dimension}{164}{thmt@dummyctr.dummy.236}%
+\contentsline {section}{Exercises}{165}{corollary.11.27}%
+\contentsline {chapter}{Index}{169}{Item.597}%

@@ -1,0 +1,230 @@
+\documentclass[11pt,a4paper,openright,twoside]{book}
+
+% 宏包
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{ctex}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,mathtools}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumerate}
+\usepackage{imakeidx}
+\usepackage{thmtools}
+\usepackage{tikz-cd}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{cleveref}
+% 设置英文名称
+\ctexset{
+  contentsname      = Contents,           % 目录标题
+  listfigurename    = List of Figures,    % 插图列表标题
+  listtablename     = List of Tables,     % 表格列表标题
+  bibname           = References,            % 参考文献
+  indexname         = Index,              % 索引标题
+  appendixname      = Appendix,           % 附录标题
+}
+% 页面设置
+\usepackage{geometry}
+\geometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=3cm,
+    marginparwidth=2.5cm,
+    marginparsep=0.5cm,
+    headheight=15pt,      % 从 14pt 改为 ≥14.5pt
+    % headsep 可以不动，或按需调整
+}
+
+%  行间距
+\linespread{1.5}
+
+% 定理环境定义
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{examplenumbered}[theorem]{Example}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{notation}[theorem]{Notation and Terminology}
+\newtheorem*{example}{Example}
+\newtheorem*{examples}{Examples}
+\newtheorem*{exercise*}{Exercise}
+
+% 斜体定理环境
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{remarks}{Remarks} % * 代表无编号
+\newtheorem*{proof*}{Proof}
+
+% 证明结束标记
+\renewcommand{\proofname}{Proof}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{重排作者QQ: 247646179}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% 超链接设置 - 使用彩色链接
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,             % 内部链接(交叉引用) - 蓝色
+    hyperindex=true, 
+    pdfauthor={M. F. Atiyah, I. G. MacDonald},
+    pdftitle={Introduction to Commutative Algebra},
+    pdfsubject={Commutative Algebra}
+}
+
+% 自定义颜色定义
+\definecolor{linkblue}{RGB}{0,0,180}
+\definecolor{citared}{RGB}{180,0,0}
+\definecolor{urlgreen}{RGB}{0,120,0}
+% 自定义命令
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathfrak{N}}
+\newcommand{\M}{\mathfrak{M}}
+\newcommand{\nilrad}{\mathfrak{N}}
+\newcommand{\jacrad}{\mathfrak{M}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Coker}{\operatorname{Coker}}
+\newcommand{\Image}{\operatorname{Im}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\hcf}{\operatorname{h.c.f.}}
+\newcommand{\lcm}{\operatorname{l.c.m.}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\trdeg}{\operatorname{tr.deg}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\providecommand{\blank}{{-}}
+% 索引
+\makeindex
+
+
+% 文档开始
+\begin{document}
+\frontmatter
+% 封面
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm}
+        {\Huge\bfseries Introduction to Commutative Algebra\par}
+        \vspace{1.5cm}
+        {\Large M. F. Atiyah, F.R.S.\par}
+        \vspace{0.5cm}
+        {\Large I. G. MacDonald\par}
+        \vspace{0.5cm}
+        {\large University of Oxford\par}
+        
+        \vfill
+        
+        {\large ADDISON-WESLEY SERIES IN MATHEMATICS\par}
+        \vspace{0.5cm}
+        {\large Consulting Editor: LYNN H. LOOMIS\par}
+        
+        \vfill
+        
+        {\large Addison-Wesley Publishing Company\par}
+        {\large Reading, Massachusetts\par}
+    \end{center}
+\end{titlepage}
+
+\thispagestyle{empty}
+
+\begin{center}
+    \small
+    Copyright \textcopyright{} 1969 by Addison-Wesley Publishing Company, Inc.\\
+    \vspace{0.5cm}
+    All rights reserved. No part of this publication may be reproduced,\\
+    stored in a retrieval system, or transmitted, in any form or by any means,\\
+    electronic, mechanical, photocopying, recording or otherwise, without prior\\
+    written permission of the publisher.\\
+    \vspace{0.5cm}
+    Library of Congress Catalog Card No. 72-79530
+\end{center}
+
+% 重排前言
+\newpage
+\pagestyle{plain}           % 目录页码用罗马数字
+\addcontentsline{toc}{chapter}{重排前言}
+\chapter*{重排前言}
+Atiyah 与 Macdonald 的《交换代数导引》(\textit{Introduction to Commutative Algebra}) 自 1969 年问世以来, 一直是交换代数领域的经典入门教材. 全书篇幅精炼, 却以极其清晰的脉络涵盖了环与模的基本理论、局部化、整性、赋值环、维数理论以及完备化等核心内容, 被无数数学工作者视为案头必读书. 
+
+然而, 由于原书成书年代较早, 网络上流通的扫描版电子文件普遍存在字体模糊、符号不清、版面拥挤的问题, 长期阅读容易造成视觉疲劳. 为了让新一代学习者能够更舒适地研读这部经典, 我们发起了本次非官方重排项目. 
+
+本次重排工作的要点如下: 
+\begin{enumerate}
+  \item \textbf{完全基于原书内容}: 定理编号、证明结构、习题安排均严格遵从 1969 年版, 未作任何删改. 已发现的印刷错误已在文中以脚注形式标明. 
+  \item \textbf{采用 \LaTeX{} 专业排版}: 数学公式清晰锐利, 正文行距和页边距经过仔细调整, 适合屏幕阅读和打印. 
+  \item \textbf{补充了部分索引与超链接}: 在 PDF 版本中, 目录、引用、定理编号均为可点击超链接, 方便跳转. 
+  \item \textbf{完全开源}: 所有 \LaTeX{} 源代码以 MIT 许可证托管在 GitHub 仓库. 任何人均可自由获取、编译、修改和分发, 只需保留原书版权声明. 
+\end{enumerate}
+
+\noindent\textbf{关于开源与版权}\\
+我们深知, 经典教材的重排涉及复杂的版权问题. 本项目严格遵循“只重排形式、不改变内容”的原则, 且明确声明: 
+\begin{itemize}
+  \item 原书版权归原作者及原出版社所有, 本重排版并非官方版本, 也不声称拥有任何内容版权. 
+  \item 重排版的 \LaTeX{} 源码以 MIT 许可证开源, 其目的仅在于提供一种现代化的排版实现, 方便数学爱好者自行打印和学习. 
+  \item 本项目不涉及任何商业行为, 也不提供印刷成品的售卖. 若您需要正式出版物, 请支持正版原书. 
+\end{itemize}
+
+我们鼓励所有读者在遵守上述声明的前提下, 自由下载、编译和传播本重排版的 PDF 文件. 如果您在阅读过程中发现排版错误或内容疏漏, 欢迎通过 GitHub 的 Issue 或 Pull Request 参与改进. 让我们共同维护一个高质量的开源数学资源. 
+
+最后, 由衷感谢 Atiyah 教授和 Macdonald 教授写下了这本不朽的小册子, 也感谢 Addison-Wesley 出版社当年独具慧眼的出版. 愿这份重排版能为更多后来者铺平通向交换代数世界的道路. 
+
+\vspace{1.5cm}
+\begin{flushright}
+  作者: 247646179 (QQ)\\
+
+  \today
+\end{flushright}
+% 目录
+\tableofcontents
+
+% 主内容
+\mainmatter
+\pagestyle{fancy}
+% 引言和记号
+\input{introduction}
+% 第1-11章
+\input{chapter01}
+\input{chapter02}
+\input{chapter03}
+\input{chapter04}
+\input{chapter05}
+\input{chapter06}
+\input{chapter07}
+\input{chapter08}
+\input{chapter09}
+\input{chapter10}
+\input{chapter11}
+
+% 索引
+\backmatter
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\end{document}

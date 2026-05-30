@@ -1,0 +1,98 @@
+\chapter{Artin Rings}\label{chapter8}
+
+An \emph{Artin ring}\index{Artin ring} is one which satisfies the d.c.c.\ (or equivalently the minimal condition) on ideals.
+
+The apparent symmetry with Noetherian rings is however misleading. In fact we will show that an Artin ring is necessarily Noetherian and of a very special kind. In a sense an Artin ring is the simplest kind of ring after a field, and we study them not because of their generality but because of their simplicity.
+
+\begin{proposition}\label{prop:artin-prime-maximal}
+In an Artin ring $A$ every prime ideal is maximal.
+\end{proposition}
+
+\begin{proof}
+Let $\mathfrak{p}$ be a prime ideal of $A$. Then $B = A/\mathfrak{p}$ is an Artinian integral domain. Let $x \in B$, $x \neq 0$. By the d.c.c.\ we have $(x^n) = (x^{n+1})$ for some $n$, hence $x^n = x^{n+1}y$ for some $y \in B$. Since $B$ is an integral domain and $x \neq 0$, it follows that we may cancel $x^n$, hence $xy = 1$. Hence $x$ has an inverse in $B$, and therefore $B$ is a field, so that $\mathfrak{p}$ is a maximal ideal.
+\end{proof}
+
+\begin{corollary}\label{cor:artin-nil-jacobson}
+In an Artin ring the nilradical is equal to the Jacobson radical. \qed
+\end{corollary}
+
+\begin{proposition}\label{prop:artin-finite-maximal}
+An Artin ring has only a finite number of maximal ideals.
+\end{proposition}
+
+\begin{proof}
+Consider the set of all finite intersections $\mathfrak{m}_1 \cap \cdots \cap \mathfrak{m}_n$ where the $\mathfrak{m}_i$ are maximal ideals. This set has a minimal element, say $\mathfrak{m}_1 \cap \cdots \cap \mathfrak{m}_n$; hence for any maximal ideal $\mathfrak{m}$ we have $\mathfrak{m} \cap \mathfrak{m}_1 \cap \cdots \cap \mathfrak{m}_n = \mathfrak{m}_1 \cap \cdots \cap \mathfrak{m}_n$, and therefore $\mathfrak{m} \supseteq \mathfrak{m}_1 \cap \cdots \cap \mathfrak{m}_n$. By \eqref{pro:prime avoidance} $\mathfrak{m} \supseteq \mathfrak{m}_i$ for some $i$, hence $\mathfrak{m} = \mathfrak{m}_i$ since $\mathfrak{m}_i$ is maximal.
+\end{proof}
+
+\begin{proposition}\label{prop:artin-nilpotent-nilradical}
+In an Artin ring the nilradical $\mathfrak{N}$ is nilpotent.
+\end{proposition}
+
+\begin{proof}
+By d.c.c.\ we have $\mathfrak{N}^k = \mathfrak{N}^{k+1} = \cdots = \mathfrak{a}$ say, for some $k > 0$. Suppose $\mathfrak{a} \neq 0$, and let $\Sigma$ denote the set of all ideals $\mathfrak{b}$ such that $\mathfrak{a}\mathfrak{b} \neq 0$. Then $\Sigma$ is not empty, since $\mathfrak{a} \in \Sigma$. Let $\mathfrak{c}$ be a minimal element of $\Sigma$; then there exists $x \in \mathfrak{c}$ such that $x\mathfrak{a} \neq 0$; we have $(x) \subseteq \mathfrak{c}$, hence $(x) = \mathfrak{c}$ by the minimality of $\mathfrak{c}$. But $(x\mathfrak{a})\mathfrak{a} = x\mathfrak{a}^2 = x\mathfrak{a} \neq 0$, and $x\mathfrak{a} \subseteq (x)$, hence $x\mathfrak{a} = (x)$ (again by minimality). Hence $x = xy$ for some $y \in \mathfrak{a}$, and therefore $x = xy = xy^2 = \cdots = xy^n = \cdots$. But $y \in \mathfrak{a} = \mathfrak{N}^k \subseteq \mathfrak{N}$, hence $y$ is nilpotent and therefore $x = xy^n = 0$. This contradicts the choice of $x$, therefore $\mathfrak{a} = 0$.
+\end{proof}
+
+By a \emph{chain}\index{chain of prime ideals} of prime ideals of a ring $A$ we mean a finite strictly increasing sequence $\mathfrak{p}_0 \subset \mathfrak{p}_1 \subset \cdots \subset \mathfrak{p}_n$; the \emph{length}\index{length of chain} of the chain is $n$. We define the \emph{dimension}\index{dimension of a ring} of $A$ to be the supremum of the lengths of all chains of prime ideals in $A$: it is an integer $\geq 0$, or $+\infty$ (assuming $A \neq 0$). A field has dimension 0; the ring $\Z$ has dimension 1.
+
+\begin{theorem}\label{thm:artin-noetherian-dim0}
+A ring $A$ is Artinian $\iff$ $A$ is Noetherian and $\dim A = 0$.
+\end{theorem}
+
+\begin{proof}
+$\implies$: By \eqref{prop:artin-prime-maximal} we have $\dim A = 0$. Let $\mathfrak{m}_i$ ($1 \leq i \leq n$) be the distinct maximal ideals of $A$ \eqref{prop:artin-finite-maximal}. Then $\prod_{i=1}^n \mathfrak{m}_i^k \subseteq (\bigcap_{i=1}^n \mathfrak{m}_i)^k = \mathfrak{N}^k = 0$ for some $k$ by \eqref{prop:artin-nilpotent-nilradical}. Hence by \eqref{cor:artinian-noetherian} $A$ is Noetherian.
+
+$\impliedby$: Since the zero ideal has a primary decomposition \eqref{thm:lasker-noether}, $A$ has only a finite number of minimal prime ideals, and these are all maximal since $\dim A = 0$. Hence $\mathfrak{N} = \bigcap_{i=1}^n \mathfrak{m}_i$ say; we have $\mathfrak{N}^k = 0$ by \eqref{cor:nilradical-nilpotent}, hence $\prod_{i=1}^n \mathfrak{m}_i^k = 0$ as in the previous part of the proof. Hence by \eqref{cor:artinian-noetherian} $A$ is an Artinian ring.
+\end{proof}
+
+If $A$ is an Artinian local ring with maximal ideal $\mathfrak{m}$, then $\mathfrak{m}$ is the only prime ideal of $A$ and therefore $\mathfrak{m}$ is the nilradical of $A$. Hence every element of $\mathfrak{m}$ is nilpotent, and $\mathfrak{m}$ itself is nilpotent. Every element of $A$ is either a unit or is nilpotent. An example of such a ring is $\Z/(p^n)$, where $p$ is prime and $n \geq 1$.
+
+\begin{proposition}\label{prop:noetherian-local-dichotomy}
+Let $A$ be a Noetherian local ring, $\mathfrak{m}$ its maximal ideal. Then exactly one of the following two statements is true:
+\begin{enumerate}[i)]
+    \item $\mathfrak{m}^n \neq \mathfrak{m}^{n+1}$ for all $n$;
+    \item $\mathfrak{m}^n = 0$ for some $n$, in which case $A$ is an Artinian local ring.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Suppose $\mathfrak{m}^n = \mathfrak{m}^{n+1}$ for some $n$. By Nakayama's lemma \eqref{pro:nakayama} we have $\mathfrak{m}^n = 0$. Let $\mathfrak{p}$ be any prime ideal of $A$. Then $\mathfrak{m}^n \subseteq \mathfrak{p}$, hence (taking radicals) $\mathfrak{m} = \mathfrak{p}$. Hence $\mathfrak{m}$ is the only prime ideal of $A$ and therefore $A$ is Artinian.
+\end{proof}
+
+\begin{theorem}[Structure theorem for Artin rings]\label{thm:artin-structure}
+An Artinian ring $A$ is uniquely (up to isomorphism) a finite direct product of Artinian local rings.
+\end{theorem}
+
+\begin{proof}
+Let $\mathfrak{m}_i$ ($1 \leq i \leq n$) be the distinct maximal ideals of $A$. From the proof of \eqref{thm:artin-noetherian-dim0} we have $\prod_{i=1}^n \mathfrak{m}_i^k = 0$ for some $k > 0$. By \eqref{prop:coprime-radicals} the ideals $\mathfrak{m}_i^k$ are coprime in pairs, hence $\bigcap \mathfrak{m}_i^k = \prod \mathfrak{m}_i^k$ by \eqref{pro:chinese-remainder}. Consequently by \eqref{pro:chinese-remainder} again the natural mapping $A \to \prod_{i=1}^n (A/\mathfrak{m}_i^k)$ is an isomorphism. Each $A/\mathfrak{m}_i^k$ is an Artinian local ring, hence $A$ is a direct product of Artinian local rings.
+
+Conversely, suppose $A \cong \prod_{i=1}^n A_i$, where the $A_i$ are Artinian local rings. Then for each $i$ we have a natural surjective homomorphism (projection on the $i$th factor) $\phi_i \colon A \to A_i$. Let $\mathfrak{a}_i = \Ker(\phi_i)$. By \eqref{pro:chinese-remainder} the $\mathfrak{a}_i$ are pairwise coprime, and $\bigcap \mathfrak{a}_i = 0$. Let $\mathfrak{q}_i$ be the unique prime ideal of $A_i$, and let $\mathfrak{p}_i$ be its contraction $\phi_i^{-1}(\mathfrak{q}_i)$. The ideal $\mathfrak{p}_i$ is prime and therefore maximal by \eqref{prop:artin-prime-maximal}. Since $\mathfrak{q}_i$ is nilpotent it follows that $\mathfrak{a}_i$ is $\mathfrak{p}_i$-primary, and hence $\bigcap \mathfrak{a}_i = (0)$ is a primary decomposition of the zero ideal in $A$. Since the $\mathfrak{a}_i$ are pairwise coprime, so are the $\mathfrak{p}_i$, and they are therefore isolated prime ideals of $(0)$. Hence all the primary components $\mathfrak{a}_i$ are isolated, and therefore uniquely determined by $A$, by the 2nd uniqueness theorem \eqref{cor:isolated-primary-components-unique}. Hence the rings $A_i \cong A/\mathfrak{a}_i$ are uniquely determined by $A$.
+\end{proof}
+
+\begin{example}
+A ring with only one prime ideal need not be Noetherian (and hence not an Artinian ring). Let $A = k[x_1, x_2, \ldots]$ be the polynomial ring in a countably infinite set of indeterminates $x_n$ over a field $k$, and let $\mathfrak{a}$ be the ideal $(x_1, x_2^2, \ldots, x_n^n, \ldots)$. The ring $B = A/\mathfrak{a}$ has only one prime ideal (namely the image of $(x_1, x_2, \ldots, x_n, \ldots)$), hence $B$ is a local ring of dimension 0. But $B$ is not Noetherian, for it is not difficult to see that its prime ideal is not finitely generated.
+\end{example}
+
+If $A$ is a local ring, $\mathfrak{m}$ its maximal ideal, $k = A/\mathfrak{m}$ its residue field, the $A$-module $\mathfrak{m}/\mathfrak{m}^2$ is annihilated by $\mathfrak{m}$ and therefore has the structure of a $k$-vector space. If $\mathfrak{m}$ is finitely generated (e.g., if $A$ is Noetherian), the images in $\mathfrak{m}/\mathfrak{m}^2$ of a set of generators of $\mathfrak{m}$ will span $\mathfrak{m}/\mathfrak{m}^2$ as a vector space, and therefore $\dim_k(\mathfrak{m}/\mathfrak{m}^2)$ is finite. (See \eqref{prop:generate-modulo-maximal}.)
+
+\begin{proposition}\label{prop:artin-local-principal}
+Let $A$ be an Artinian local ring. Then the following are equivalent:
+\begin{enumerate}[i)]
+    \item every ideal in $A$ is principal;
+    \item the maximal ideal $\mathfrak{m}$ is principal;
+    \item $\dim_k(\mathfrak{m}/\mathfrak{m}^2) \leq 1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+i) $\implies$ ii) $\implies$ iii) is clear.
+
+iii) $\implies$ i): If $\dim_k(\mathfrak{m}/\mathfrak{m}^2) = 0$, then $\mathfrak{m} = \mathfrak{m}^2$, hence $\mathfrak{m} = 0$ by Nakayama's lemma, and therefore $A$ is a field and there is nothing to prove.
+
+If $\dim_k(\mathfrak{m}/\mathfrak{m}^2) = 1$, then $\mathfrak{m}$ is a principal ideal by \eqref{prop:generate-modulo-maximal} (take $M = \mathfrak{m}$ there), say $\mathfrak{m} = (x)$. Let $\mathfrak{a}$ be an ideal of $A$, other than $(0)$ or $(1)$. We have $\mathfrak{m} = \mathfrak{N}$, hence $\mathfrak{m}$ is nilpotent by \eqref{prop:artin-nilpotent-nilradical} and therefore there exists an integer $r$ such that $\mathfrak{a} \subseteq \mathfrak{m}^r$, $\mathfrak{a} \not\subseteq \mathfrak{m}^{r+1}$; hence there exists $y \in \mathfrak{a}$ such that $y = ax^r$, $y \notin (x^{r+1})$; consequently $a \notin (x)$ and $a$ is a unit in $A$. Hence $x^r \in \mathfrak{a}$, therefore $\mathfrak{m}^r = (x^r) \subseteq \mathfrak{a}$ and hence $\mathfrak{a} = \mathfrak{m}^r = (x^r)$. Hence $\mathfrak{a}$ is principal.
+\end{proof}
+
+\begin{example}
+The rings $\Z/(p^n)$ ($p$ prime), $k[x]/(f)$ ($f$ irreducible) satisfy the conditions of \eqref{prop:artin-local-principal}. On the other hand, the Artinian local ring $k[x^2, x^3]/(x^4)$ does not: here $\mathfrak{m}$ is generated by $x^2$ and $x^3 \pmod{x^4}$, so that $\mathfrak{m}^2 = 0$ and $\dim(\mathfrak{m}/\mathfrak{m}^2) = 2$.
+\end{example}
+
+\input{chapter08-exercises.tex}

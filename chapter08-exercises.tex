@@ -1,0 +1,43 @@
+%=============================================================================
+% Chapter 8 Exercises - With hints from original book (6 exercises)
+%=============================================================================
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{enumerate}
+    \item \label{exer1-chapter8}Let $\mathfrak{q}_1 \cap \cdots \cap \mathfrak{q}_n = 0$ be a minimal primary decomposition of the zero ideal in a Noetherian ring $A$, where $\mathfrak{q}_i$ is $\mathfrak{p}_i$-primary. Let $\mathfrak{p}_i^{(r)}$ be the $r$th symbolic power of $\mathfrak{p}_i$ (Chapter \ref{chapter4}, Exercise \ref{exer13-chapter4}). Prove that for each $i = 1, \ldots, n$ there exists an integer $r_i$ such that $\mathfrak{p}_i^{(r_i)} \subseteq \mathfrak{q}_i$.
+    
+    \quad\, Suppose $\mathfrak{q}_i$ is an isolated primary component, then $A_{\mathfrak{p}_i}$ is an Artinian local ring, so if $\mathfrak{m}_i$ is its maximal ideal we have $\mathfrak{m}_i^r = 0$ for sufficiently large $r$, and therefore $\mathfrak{q}_i = \mathfrak{p}_i^{(r)}$ for sufficiently large $r$.
+
+    \quad\, If $\mathfrak{q}_1$ is an embedded primary component, then $A_{\mathfrak{p}_1}$ is not Artinian, hence the powers $\mathfrak{m}^r$ are distinct, and therefore the symbolic powers $\mathfrak{p}_1^{(r)}$ are also distinct. Hence in a given primary decomposition one can replace $\mathfrak{q}_1$ by infinitely many $\mathfrak{p}_1$-primary ideals $\mathfrak{p}_1^{(r)}$ (where $r \geq r_1$), so that there exist infinitely many minimal primary decompositions which differ only in the $\mathfrak{p}_1$-component.
+
+    \item \label{exer2-chapter8}Let $A$ be a Noetherian ring. Prove that the following are equivalent:
+    \begin{enumerate}[i)]
+        \item $A$ is Artinian;
+        \item $\Spec(A)$ is discrete and finite;
+        \item $\Spec(A)$ is discrete.
+    \end{enumerate}
+
+    \item \label{exer3-chapter8}Let $k$ be a field and $A$ a finitely generated $k$-algebra. Prove that the following are equivalent:
+    \begin{enumerate}[i)]
+        \item $A$ is Artinian;
+        \item $A$ is a finite $k$-algebra (i.e., a finite-dimensional vector space over $k$).
+    \end{enumerate}
+    \textit{Hint:} To prove i) $\implies$ ii), use \eqref{prop:noetherian-local-dichotomy} to reduce to the case where $A$ is an Artin local ring. By the Nullstellensatz \eqref{cor:nullstellensatz-corollary}, the residue field of $A$ is a finite extension of $k$. Then use the fact that $A$ has finite length as an $A$-module. To prove ii) $\implies$ i), observe that the ideals of $A$ are $k$-subspaces, hence satisfy the d.c.c.
+
+    \item \label{exer4-chapter8}Let $f \colon A \to B$ be a ring homomorphism of finite type. Consider the following statements:
+    \begin{enumerate}[i)]
+        \item $f$ is finite;
+        \item For every $\mathfrak{p} \in \Spec(A)$, the fiber $f^{*-1}(\mathfrak{p})$ is a discrete subspace of $\Spec(B)$;
+        \item For every $\mathfrak{p} \in \Spec(A)$, the ring $B \otimes_A k(\mathfrak{p})$ is a finite $k(\mathfrak{p})$-algebra (where $k(\mathfrak{p})$ is the residue field of $A_{\mathfrak{p}}$);
+        \item For every $\mathfrak{p} \in \Spec(A)$, the fiber $f^{*-1}(\mathfrak{p})$ is a finite set.
+    \end{enumerate}
+    Prove that i) $\implies$ ii) $\iff$ iii) $\implies$ iv).
+
+    \textit{Hint:} Use Exercises \ref{exer2-chapter8} and \ref{exer3-chapter8}.
+    If $f$ is integral and $f^*$ has finite fibers, is $f$ necessarily finite?
+
+    \item \label{exer5-chapter8}In the situation of Chapter \ref{chapter5}, Exercise \ref{exer16-chapter5}, prove that $X$ is a finite covering of $L$ (that is, the number of points of $X$ lying over a given point of $L$ is finite and bounded).
+
+    \item \label{exer6-chapter8}Let $A$ be a Noetherian ring and $\mathfrak{q}$ a $\mathfrak{p}$-primary ideal in $A$. Consider chains of primary ideals from $\mathfrak{q}$ to $\mathfrak{p}$. Prove that all such chains are finite and of bounded length, and that all maximal chains have the same length.
+\end{enumerate}

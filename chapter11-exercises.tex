@@ -1,0 +1,39 @@
+%=============================================================================
+% Chapter 11 Exercises - With hints from original book (7 exercises)
+%=============================================================================
+\section*{Exercises}
+\addcontentsline{toc}{section}{Exercises}
+
+\begin{enumerate}
+    \item \label{exer1-chapter11}Let $f \in k[x_1, \ldots, x_n]$ be an irreducible polynomial over an algebraically closed field $k$. A point $P$ on the variety $f(x) = 0$ is non-singular if and only if not all the partial derivatives $\partial f/\partial x_i$ vanish at $P$. Let $A = k[x_1, \ldots, x_n]/(f)$ and $\mathfrak{m}$ be the maximal ideal corresponding to $P$. Show that $P$ is non-singular $\iff$ $A_{\mathfrak{m}}$ is a regular local ring.
+    
+    \textit{Hint:} By \eqref{cor:dim-quotient} we have $\dim A_{\mathfrak{m}} = n-1$. Now \[\mathfrak{m}/\mathfrak{m}^2 \cong (x_1, \ldots, x_n)/(x_1, \ldots, x_n)^2 + (f),\] which has dimension $n-1$ if and only if $f \notin (x_1, \ldots, x_n)^2$.
+
+    \item \label{exer2-chapter11}In \eqref{cor:algebraic-independence} suppose that $A$ is complete. Show that the homomorphism $k[[t_1, \ldots, t_d]] \to A$ given by $t_i \mapsto x_i$ is injective and that $A$ is a finitely generated $k[[t_1, \ldots, t_d]]$-module.
+    
+    \textit{Hint:} Use \eqref{prop:10.24}.
+
+    \item \label{exer3-chapter11}Generalize \eqref{thm:local-dim-equal} to the case where $k$ is not algebraically closed.\\
+    \textit{Hint:} If $\bar{k}$ is the algebraic closure of $k$, then $\bar{k}[x_1, \ldots, x_n]$ is integral over $k[x_1, \ldots, x_n]$.
+
+    \item \label{exer4-chapter11}An example of a Noetherian domain of infinite dimension (Nagata). Let $k$ be a field and let $A = k[x_1, x_2, \ldots, x_n, \ldots]$ be a polynomial ring over $k$ in a countably infinite set of indeterminates. Let $m_1, m_2, \ldots$ be an increasing sequence of positive integers such that $m_{i+1} - m_i > m_i - m_{i-1}$ for all $i > 1$. Let $\mathfrak{p}_i = (x_{m_i+1}, \ldots, x_{m_{i+1}})$ and let $S$ be the complement in $A$ of the union of the ideals $\mathfrak{p}_i$.
+
+    \quad\, Each $\mathfrak{p}_i$ is a prime ideal and therefore the set $S$ is multiplicatively closed. The ring $S^{-1}A$ is Noetherian by Chapter~7, Exercise~9. Each $S^{-1}\mathfrak{p}_i$ has height equal to $m_{i+1} - m_i$, hence $\dim S^{-1}A = \infty$.
+
+    \item \label{exer5-chapter11}Reformulate \eqref{thm:hilbert-serre} in terms of the Grothendieck group $K(A_0)$ (Chapter \ref{chapter7}, Exercise \ref{exer26-chapter7}\footnote{原文为Exercise \ref{exer25-chapter7}, 显然有误.}).
+
+    \item \label{exer6-chapter11}Let $A$ be a ring (not necessarily Noetherian). Prove that
+    \[
+    1 + \dim A \le \dim A[x] \le 1 + 2 \dim A.
+    \]
+    
+    \textit{Hint:} Let $f: A \to A[x]$ be the embedding and consider the fiber of $f^*: \Spec(A[x]) \to \Spec(A)$ over a prime ideal $\mathfrak{p}$ of $A$. This fiber can be identified with the spectrum of $k \otimes_A A[x] \cong k[x]$, where $k$ is the residue field at $\mathfrak{p}$ (Chapter \ref{chapter3}, Exercise \ref{exer21-chapter3}), and $\dim k[x] = 1$. Now use Exercise \ref{exer7-chapter4}(ii) of Chapter \ref{chapter4}.
+
+    \item \label{exer7-chapter11}Let $A$ be a Noetherian ring. Then
+    \[
+    \dim A[x] = 1 + \dim A,
+    \]
+    and hence by induction $\dim A[x_1, \ldots, x_n] = n + \dim A$.
+
+    \textit{Hint:} Let $\mathfrak{p}$ be a prime ideal in $A$ of height $m$. Then there exist $a_1, \ldots, a_m \in \mathfrak{p}$ such that $\mathfrak{p}$ is a minimal prime ideal belonging to the ideal $\mathfrak{a} = (a_1, \ldots, a_m)$. By Chapter \ref{chapter4}, Exercise \ref{exer4-chapter7}, $\mathfrak{p}[x]$ is a minimal prime ideal belonging to $\mathfrak{a}[x]$, hence $\text{height } \mathfrak{p}[x] \leq m$. On the other hand, the chain of prime ideals $\mathfrak{p}_0 \subset \cdots \subset \mathfrak{p}_m = \mathfrak{p}$ gives $\mathfrak{p}_0[x] \subset \cdots \subset \mathfrak{p}_m[x] = \mathfrak{p}[x]$, hence $\text{height } \mathfrak{p}[x] \geq m$. Therefore $\text{height } \mathfrak{p}[x] = \text{height } \mathfrak{p}$. Now use the argument of Exercise \ref{exer6-chapter11}.
+\end{enumerate}

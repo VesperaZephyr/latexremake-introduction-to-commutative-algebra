@@ -1,0 +1,172 @@
+\chapter{Chain Conditions}\label{chapter6}
+
+So far we have considered quite arbitrary commutative rings (with identity). To go further, however, and obtain deeper theorems we need to impose some finiteness conditions. The most convenient way is in the form of ``chain conditions''. These apply both to rings and modules, and in this chapter we consider the case of modules. Most of the arguments are of a rather formal kind and because of this there is a symmetry between the ascending and descending chains---a symmetry which disappears in the case of rings as we shall see in subsequent chapters.
+
+Let $L$ be a set partially ordered by a relation $\leq$ (i.e., $\leq$ is reflexive and transitive and is such that $x \leq y$ and $y \leq x$ together imply $x = y$).
+
+\begin{proposition}\label{prop:chain-equivalent}
+The following conditions on $L$ are equivalent:
+\begin{enumerate}[i)]
+    \item Every increasing sequence $x_1 \leq x_2 \leq \cdots$ in $L$ is stationary (i.e., there exists $n$ such that $x_n = x_{n+1} = \cdots$).
+    \item Every non-empty subset of $L$ has a maximal element.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+i) $\implies$ ii). If ii) is false there is a non-empty subset $T$ of $L$ with no maximal element, and we can construct inductively a non-terminating strictly increasing sequence in $T$.
+
+ii) $\implies$ i). The set $\{x_m\}_{m \geq 1}$ has a maximal element, say $x_n$.
+\end{proof}
+
+If $\Sigma$ is the set of submodules of a module $M$, ordered by the relation $\subseteq$, then  
+i) is called the \emph{ascending chain condition} (a.c.c. for short) and ii) the \emph{maximal condition}. A module $M$ satisfying either of these equivalent conditions is said  
+to be \emph{Noetherian} (after Emmy Noether). If $\Sigma$ is ordered by $\supseteq$, then i) is the \emph{descending chain condition} (d.c.c. for short) and ii) the \emph{minimal condition}. A module $M$ satisfying these is said to be \emph{Artinian} (after Emil Artin).
+
+\begin{examples}
+\begin{enumerate}[1)]
+    \item A finite abelian group (as $\Z$-module) satisfies both a.c.c.\ and d.c.c.
+    
+    \item The ring $\Z$ (as $\Z$-module) satisfies a.c.c.\ but not d.c.c. For if $a \in \Z$ and $a \neq 0$ we have $(a) \supset (a^2) \supset \cdots \supset (a^n) \supset \cdots$ (strict inclusions).
+    
+    \item Let $G$ be the subgroup of $\Q/\Z$ consisting of all elements whose order is a power of $p$, where $p$ is a fixed prime. Then $G$ has exactly one subgroup $G_n$ of order $p^n$ for each $n \geq 0$, and $G_0 \subset G_1 \subset \cdots \subset G_n \subset \cdots$ (strict inclusions) so that $G$ does not satisfy the a.c.c. On the other hand the only proper subgroups of $G$ are the $G_n$, so that $G$ does satisfy d.c.c.
+    
+    \item The group $H$ of all rational numbers of the form $m/p^n$ ($m, n \in \Z$, $n \geq 0$) satisfies neither chain condition. For we have an exact sequence $0 \longrightarrow \Z \longrightarrow H \longrightarrow G \longrightarrow 0$, so that $H$ doesn't satisfy d.c.c.\ because $\Z$ doesn't; and $H$ doesn't satisfy a.c.c.\ because $G$ doesn't.
+    
+    \item The ring $k[x]$ ($k$ a field, $x$ an indeterminate) satisfies a.c.c.\ but not d.c.c.\ on ideals.
+    
+    \item The polynomial ring $k[x_1, x_2, \ldots]$ in an infinite number of indeterminates $x_n$ satisfies neither chain condition on ideals: for the sequence $(x_1) \subset (x_1, x_2) \subset \cdots$ is strictly increasing, and the sequence $(x_1) \supset (x_1^2) \supset (x_1^3) \supset \cdots$ is strictly decreasing.
+    
+    \item We shall see later that a ring which satisfies d.c.c.\ on ideals must also satisfy a.c.c.\ on ideals. (This is not true in general for modules: see Examples 2, 3 above.)
+\end{enumerate}
+\end{examples}
+
+\begin{proposition}\label{prop:noetherian-fg}
+$M$ is a Noetherian $A$-module $\iff$ every submodule of $M$ is finitely generated.
+\end{proposition}
+
+\begin{proof}
+$\implies$: Let $N$ be a submodule of $M$, and let $L$ be the set of all finitely generated submodules of $N$. Then $L$ is not empty (since $0 \in L$) and therefore has a maximal element, say $N_0$. If $N_0 \neq N$, consider the submodule $N_0 + Ax$ where $x \in N$, $x \notin N_0$; this is finitely generated and strictly contains $N_0$, so we have a contradiction. Hence $N = N_0$ and therefore $N$ is finitely generated.
+
+$\impliedby$: Let $M_1 \subseteq M_2 \subseteq \cdots$ be an ascending chain of submodules of $M$. Then $N = \bigcup_{n=1}^\infty M_n$ is a submodule of $M$, hence is finitely generated, say by $x_1, \ldots, x_r$. Say $x_i \in M_{n_i}$ and let $n = \max_{i=1}^r n_i$; then each $x_i \in M_n$, hence $M_n = M$ and therefore the chain is stationary.
+\end{proof}
+
+Because of \eqref{prop:noetherian-fg}, Noetherian modules are more important than Artinian modules: the Noetherian condition is just the right finiteness condition to make a lot of theorems work. However, many of the elementary formal properties apply equally to Noetherian and Artinian modules.
+
+\begin{proposition}\label{prop:exact-sequence}
+    Let $0 \longrightarrow M' \stackrel{\alpha}{\longrightarrow} M \stackrel{\beta}{\longrightarrow} M'' \longrightarrow 0$ be an exact sequence of $A$-modules. Then
+    \begin{enumerate}[i)]
+        \item $M$ is Noetherian $\iff$ $M'$ and $M''$ are Noetherian;
+        \item $M$ is Artinian $\iff$ $M'$ and $M''$ are Artinian.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+We shall prove i); the proof of ii) is similar.
+
+$\implies$: An ascending chain of submodules of $M'$ (or $M''$) gives rise to a chain in $M$, hence is stationary.
+
+$\impliedby$: Let $(L_n)_{n \geq 1}$ be an ascending chain of submodules of $M$; then $(\alpha^{-1}(L_n))$ is a chain in $M'$, and $(\beta(L_n))$ is a chain in $M''$. For large enough $n$ both these chains are stationary, and it follows that the chain $(L_n)$ is stationary.
+\end{proof}
+
+\begin{corollary}\label{cor:finite-direct-sum}
+If $M_i$ ($1 \leq i \leq n$) are Noetherian (resp.\ Artinian) $A$-modules, so is $\bigoplus_{i=1}^n M_i$.
+\end{corollary}
+
+\begin{proof}
+Apply induction and \eqref{prop:exact-sequence} to the exact sequence
+\[
+    0 \longrightarrow M_n \longrightarrow \bigoplus_{i=1}^n M_i \longrightarrow \bigoplus_{i=1}^{n-1} M_i \longrightarrow 0. \qedhere
+\]
+\end{proof}
+
+A ring $A$ is said to be \emph{Noetherian}\index{Noetherian ring} (resp.\ \emph{Artinian}\index{Artinian ring}) if it is so as an $A$-module, i.e., if it satisfies a.c.c.\ (resp.\ d.c.c.) on ideals.
+
+\begin{examples}
+\begin{enumerate}[1)]
+    \item Any field is both Artinian and Noetherian; so is the ring $\Z/(n)$ ($n \neq 0$). The ring $\Z$ is Noetherian, but not Artinian (Example 2 above).
+    
+    \item Any principal ideal domain is Noetherian (by \eqref{prop:noetherian-fg}: every ideal is finitely generated).
+    
+    \item The ring $k[x_1, x_2, \ldots]$ is not Noetherian (Example 6 above). But it is an integral domain, hence has a field of fractions. Thus a subring of a Noetherian ring need not be Noetherian.
+    
+    \item Let $X$ be a compact infinite Hausdorff space, $C(X)$ the ring of real-valued continuous functions on $X$. Take a strictly decreasing sequence $F_1 \supset F_2 \supset \cdots$ of closed sets in $X$, and let $\mathfrak{a}_n = \{f \in C(X) : f(F_n) = 0\}$. Then the $\mathfrak{a}_n$ form a strictly increasing sequence of ideals in $C(X)$: so $C(X)$ is not a Noetherian ring.
+\end{enumerate}
+\end{examples}
+\begin{proposition}\label{prop:fg-module}
+    Let $A$ be a Noetherian (resp.\ Artinian) ring, $M$ a finitely-generated $A$-module. Then $M$ is Noetherian (resp.\ Artinian).
+\end{proposition}
+\begin{proof}
+    $M$ is a quotient of $A^n$ for some $n$: apply \eqref{cor:finite-direct-sum} and \eqref{prop:exact-sequence}.
+\end{proof}
+
+\begin{proposition}\label{prop:quotient-ring}
+    Let $A$ be Noetherian (resp.\ Artinian), $\mathfrak{a}$ an ideal of $A$. Then $A/\mathfrak{a}$ is a Noetherian (resp.\ Artinian) ring.
+\end{proposition}
+\begin{proof}
+    By \eqref{prop:exact-sequence} $A/\mathfrak{a}$ is Noetherian (resp.\ Artinian) as an $A$-module, hence also as an $A/\mathfrak{a}$-module.
+\end{proof}
+
+A \emph{chain}\index{chain} of submodules of a module $M$ is a sequence $(M_i)$ ($0 \leq i \leq n$) of submodules of $M$ such that $M = M_0 \supset M_1 \supset \cdots \supset M_n = 0$ (strict inclusions). The \emph{length}\index{length of chain} of the chain is $n$ (the number of ``links''). A \emph{composition series}\index{composition series} of $M$ is a maximal chain, that is one in which no extra submodules can be inserted: this is equivalent to saying that each quotient $M_{i-1}/M_i$ ($1 \leq i \leq n$) is \emph{simple}\index{simple module} (that is, has no submodules except $0$ and itself).
+
+\begin{proposition}\label{prop:composition-series}
+Suppose that $M$ has a composition series of length $n$. Then every composition series of $M$ has length $n$, and every chain in $M$ can be extended to a composition series.
+\end{proposition}
+
+\begin{proof}
+Let $l(M)$ denote the least length of a composition series of a module $M$. ($l(M) = +\infty$ if $M$ has no composition series.)
+
+\begin{enumerate}[i)]
+    \item $N \subset M \implies l(N) < l(M)$. Let $(M_i)$ be a composition series of $M$ of minimum length, and consider the submodules $N_i = N \cap M_i$ of $N$. Since $N_{i-1}/N_i \subseteq M_{i-1}/M_i$ and the latter is a simple module, we have either $N_{i-1}/N_i = M_{i-1}/M_i$, or else $M_{i-1} = N_{i-1}$; hence, removing repeated terms, we have a composition series of $N$, so that $l(N) \leq l(M)$. If $l(N) = l(M) = n$, then $N_{i-1}/N_i = M_{i-1}/M_i$ for each $i = 1, 2, \ldots, n$; hence $M_{n-1} = N_{n-1}$, hence $M_{n-2} = N_{n-2}$, \ldots\ and finally $M = N$.
+    
+    \item Any chain in $M$ has length $\leq l(M)$. Let $M = M_0 \supset M_1 \supset \cdots$ be a chain of length $k$. Then by i) we have $l(M) > l(M_1) > \cdots > l(M_k) = 0$, hence $l(M) \geq k$.
+    
+    \item Consider any composition series of $M$. If it has length $k$, then $k \geq l(M)$ by ii), hence $k = l(M)$ by the definition of $l(M)$. Hence all composition series have the same length. Finally, consider any chain. If its length is $l(M)$ it must be a composition series, by ii); if its length is $< l(M)$ it is not a composition series, hence not maximal, and therefore new terms can be inserted until the length is $l(M)$. \qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{proposition}\label{prop:composition-chain}
+    $M$ has a composition series $\iff$ $M$ satisfies both chain conditions.
+\end{proposition}
+
+\begin{proof}
+    $\implies$: All chains in $M$ are of bounded length, hence both a.c.c.\ and d.c.c.\ hold.
+
+    $\impliedby$: Construct a composition series of $M$ as follows. Since $M = M_0$ satisfies the maximum condition by \eqref{prop:chain-equivalent}, it has a maximal submodule $M_1 \subset M_0$. Similarly $M_1$ has a maximal submodule $M_2 \subset M_1$, and so on. Thus we have a strictly descending chain $M_0 \supset M_1 \supset \cdots$ which by d.c.c.\ must be finite, and hence is a composition series of $M$.
+\end{proof}
+
+A module satisfying both a.c.c.\ and d.c.c.\ is therefore called a \emph{module of finite length}\index{finite length}. By \eqref{prop:composition-series} all composition series of $M$ have the same length $l(M)$, called the \emph{length}\index{length of a module} of $M$. The \emph{Jordan--H\"older theorem}\index{Jordan--H\"older theorem} applies to modules of finite length: if $(M_i)_{0 \leq i \leq n}$ and $(M'_i)_{0 \leq i \leq m}$ are any two composition series of $M$, there is a one-to-one correspondence between the set of quotients $(M_{i-1}/M_i)_{1 \leq i \leq n}$ and the set of quotients $(M'_{i-1}/M'_i)_{1 \leq i \leq m}$ such that corresponding quotients are isomorphic. The proof is the same as for finite groups.
+
+\begin{proposition}\label{prop:length-additive}
+The length $l(M)$ is an additive function on the class of all $A$-modules of finite length.
+\end{proposition}
+
+\begin{proof}
+We have to show that if $0 \longrightarrow M' \stackrel{\alpha}{\longrightarrow} M \stackrel{\beta}{\longrightarrow} M'' \longrightarrow 0$ is an exact sequence, then $l(M) = l(M') + l(M'')$. Take the image under $\alpha$ of any composition series of $M'$ and the inverse image under $\beta$ of any composition series of $M''$; these fit together to give a composition series of $M$, hence the result.
+\end{proof}
+
+Consider the particular case of modules over a field $k$, i.e., $k$-vector spaces:
+
+\begin{proposition}\label{prop:vector-space}
+For $k$-vector spaces $V$ the following conditions are equivalent:
+\begin{enumerate}[i)]
+    \item finite dimension;
+    \item finite length;
+    \item a.c.c.;
+    \item d.c.c.
+\end{enumerate}
+Moreover, if these conditions are satisfied, length = dimension.
+\end{proposition}
+
+\begin{proof}
+i) $\implies$ ii) is elementary; ii) $\implies$ iii), ii) $\implies$ iv) from Proposition~\ref{prop:composition-chain}. Remains to prove iii) $\implies$ i) and iv) $\implies$ i). Suppose i) is false, then there exists an infinite sequence $(x_n)_{n \geq 1}$ of linearly independent elements of $V$. Let $U_n$ (resp.\ $V_n$) be the vector space spanned by $x_1, \ldots, x_n$ (resp., $x_{n+1}, x_{n+2}, \ldots$). Then the chain $(U_n)_{n \geq 1}$ (resp.\ $(V_n)_{n \geq 1}$) is infinite and strictly ascending (resp.\ strictly descending).
+\end{proof}
+
+\begin{corollary}\label{cor:artinian-noetherian}
+Let $A$ be a ring in which the zero ideal is a product $\mathfrak{m}_1 \cdots \mathfrak{m}_n$ of (not necessarily distinct) maximal ideals. Then $A$ is Noetherian if and only if $A$ is Artinian.
+\end{corollary}
+
+\begin{proof}
+Consider the chain of ideals $A \supseteq \mathfrak{m}_1 \supseteq \mathfrak{m}_1\mathfrak{m}_2 \supseteq \cdots \supseteq \mathfrak{m}_1 \cdots \mathfrak{m}_n = 0$. Each factor $\mathfrak{m}_1 \cdots \mathfrak{m}_{i-1}/\mathfrak{m}_1 \cdots \mathfrak{m}_i$ is a vector space over the field $A/\mathfrak{m}_i$. Hence a.c.c.\ $\iff$ d.c.c.\ for each factor. But a.c.c.\ (resp.\ d.c.c.) for each factor $\iff$ a.c.c.\ (resp.\ d.c.c.) for $A$, by repeated application of \eqref{prop:exact-sequence}. Hence a.c.c.\ $\iff$ d.c.c.\ for $A$.
+\end{proof}
+
+\input{chapter06-exercises.tex}
