@@ -89,9 +89,43 @@ introduction-to-commutative-algebra/
 
 ## 下载PDF / Download PDF
 
-你可以在本仓库的[Releases页面](https://github.com/你的用户名/introduction-to-commutative-algebra/releases)下载最新编译好的PDF文件。
+你可以在本仓库的[这里](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra)下载最新编译好的PDF文件。
 
-You can download the latest compiled PDF file from the [Releases page](https://github.com/your-username/introduction-to-commutative-algebra/releases) of this repository.
+You can download the latest compiled PDF file from [here](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra) of this repository.
+
+---
+
+## 支持作者 / Support the Authors
+
+本项目是一个完全免费的开源项目，所有工作都是由志愿者利用业余时间完成的。我们投入了大量的时间和精力来确保排版质量和内容准确性。
+
+This project is a completely free and open source initiative, and all work is done by volunteers in their spare time. We have invested a significant amount of time and effort to ensure the quality of typesetting and accuracy of content.
+
+如果这个重排版对你的学习和研究有所帮助，并且你愿意支持我们继续制作更多高质量的数学教材重排版，可以考虑进行小额捐赠。所有捐赠将用于：
+
+If this typeset version has been helpful for your study and research, and you would like to support us in creating more high-quality typeset versions of mathematics textbooks, you may consider making a small donation. All donations will be used for:
+
+- 购买更多数学经典教材的正版书籍
+- 维护项目服务器和域名
+- 购买LaTeX相关的工具和资源
+- 支持更多开源数学项目
+
+- Purchasing official copies of more classic mathematics textbooks
+- Maintaining project servers and domain names
+- Purchasing LaTeX-related tools and resources
+- Supporting more open source mathematics projects
+
+### 捐赠方式 / Donation Methods
+
+你可以通过微信或支付宝进行扫码捐赠：
+
+You can donate by scanning the QR code with WeChat or Alipay:
+
+| 微信支付 / WeChat Pay | 支付宝 / Alipay |
+|----------------------|-----------------|
+| <img width="1280" height="1741" alt="33cbf63064ab37fe340505fcd149b1d2_720" src="https://github.com/user-attachments/assets/dee2c09a-b5e6-403d-8977-e7fcb99010f7" />
+ | <img width="1260" height="1890" alt="949d2b5ab41b91f2f4e318e486c96886_720" src="https://github.com/user-attachments/assets/67ed9d86-049f-497c-b44c-7acaefbf3efe" />
+ |
 
 ---
 
