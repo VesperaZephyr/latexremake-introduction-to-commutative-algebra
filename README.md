@@ -123,7 +123,7 @@ You can donate by scanning the QR code with WeChat or Alipay:
 
 | 微信支付 / WeChat Pay | 支付宝 / Alipay |
 |----------------------|-----------------|
-| <img width="300" height="200" alt="33cbf63064ab37fe340505fcd149b1d2_720" src="https://github.com/user-attachments/assets/dee2c09a-b5e6-403d-8977-e7fcb99010f7" /> | <img width="300" height="200" alt="949d2b5ab41b91f2f4e318e486c96886_720" src="https://github.com/user-attachments/assets/67ed9d86-049f-497c-b44c-7acaefbf3efe" /> |
+| <img width="439" height="597" alt="33cbf63064ab37fe340505fcd149b1d2_720" src="https://github.com/user-attachments/assets/dee2c09a-b5e6-403d-8977-e7fcb99010f7" /> | <img width="420" height="630" alt="949d2b5ab41b91f2f4e318e486c96886_720" src="https://github.com/user-attachments/assets/67ed9d86-049f-497c-b44c-7acaefbf3efe" /> |
 
 ---
 
