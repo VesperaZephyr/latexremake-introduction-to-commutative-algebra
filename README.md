@@ -89,9 +89,9 @@ introduction-to-commutative-algebra/
 
 ## 下载PDF / Download PDF
 
-你可以在本仓库的[这里](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra/blob/main/main.pdf)下载最新编译好的PDF文件。
+你可以在本仓库的[这里](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra/releases/tag/Math)下载最新编译好的PDF文件。
 
-You can download the latest compiled PDF file from [here](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra/blob/main/main.pdf) of this repository.
+You can download the latest compiled PDF file from [here](https://github.com/VesperaZephyr/latexremake-introduction-to-commutative-algebra/releases/tag/Math) of this repository.
 
 ---
 
