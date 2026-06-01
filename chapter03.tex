@@ -1,0 +1,350 @@
+\chapter{Rings and Modules of Fractions}\label{chapter3}
+
+The formation of rings of fractions and the associated process of localization are perhaps the most important technical tools in commutative algebra. They correspond in the algebro-geometric picture to concentrating attention on an open set or near a point, and the importance of these notions should be self-evident. This chapter gives the definitions and simple properties of the formation of fractions.
+
+The procedure by which one constructs the rational field $\Q$ from the ring of integers $\Z$ (and embeds $\Z$ in $\Q$) extends easily to any integral domain $A$ and produces the field of fractions of $A$. The construction consists in taking all ordered pairs $(a, s)$ where $a, s \in A$ and $s \neq 0$, and setting up an equivalence relation between such pairs:
+\[
+    (a, s) \sim (b, t) \iff at - bs = 0.
+\]
+This works only if $A$ is an integral domain, because the verification that the relation is transitive involves canceling, i.e.\ the fact that $A$ has no zero-divisor $\neq 0$. However, it can be generalized as follows:
+
+Let $A$ be any ring. A \emph{multiplicatively closed subset}\index{Multiplicatively closed set} of $A$ is a subset $S$ of $A$ such that $1 \in S$ and $S$ is closed under multiplication: in other words $S$ is a subsemigroup of the multiplicative semigroup of $A$. Define a relation $\sim$ on $A \times S$ as follows:
+\[
+    (a, s) \sim (b, t) \iff (at - bs)u = 0 \text{ for some } u \in S.
+\]
+Clearly this relation is reflexive and symmetric. To show that it is transitive, suppose $(a, s) \sim (b, t)$ and $(b, t) \sim (c, u)$. Then there exist $v, w \in S$ such that $(at - bs)v = 0$ and $(bu - ct)w = 0$. Eliminate $b$ from these two equations and we have $(au - cs)tvw = 0$. Since $S$ is closed under multiplication, we have $tvw \in S$, hence $(a, s) \sim (c, u)$. Thus we have an equivalence relation.
+
+Let $a/s$ denote the equivalence class of $(a, s)$, and let $S^{-1}A$ denote the set of equivalence classes. We put a ring structure on $S^{-1}A$ by defining addition and multiplication of these ``fractions'' $a/s$ in the same way as in elementary algebra: that is,
+\[
+    (a/s) + (b/t) = (at + bs)/st, \qquad (a/s)(b/t) = ab/st.
+\]
+
+\begin{exercise*}
+    Verify that these definitions are independent of the choices of representatives $(a, s)$ and $(b, t)$, and that $S^{-1}A$ satisfies the axioms of a commutative ring with identity.
+\end{exercise*}
+
+We also have a ring homomorphism $f \colon A \to S^{-1}A$ defined by $f(x) = x/1$. This is not in general injective.
+
+\begin{remark}
+If $A$ is an integral domain and $S = A \setminus \{0\}$, then $S^{-1}A$ is the field of fractions of $A$.
+\end{remark}
+
+The ring $S^{-1}A$ is called the \emph{ring of fractions}\index{Ring!of fractions}\index{Fractions, ring of} of $A$ with respect to $S$. It has a universal property:
+
+\begin{proposition}\label{prop:universal-property}
+Let $g \colon A \to B$ be a ring homomorphism such that $g(s)$ is a unit in $B$ for all $s \in S$. Then there exists a unique ring homomorphism $h \colon S^{-1}A \to B$ such that $g = h \circ f$.
+\end{proposition}
+
+\begin{proof}
+i) \textit{Uniqueness.} If $h$ satisfies the conditions, then $h(a/1) = hf(a) = g(a)$ for all $a \in A$; hence, if $s \in S$,
+\[
+    h(1/s) = h((s/1)^{-1}) = h(s/1)^{-1} = g(s)^{-1}
+\]
+and therefore $h(a/s) = h(a/1) \cdot h(1/s) = g(a)g(s)^{-1}$, so that $h$ is uniquely determined by $g$.
+
+ii) \textit{Existence.} Let $h(a/s) = g(a)g(s)^{-1}$. Then $h$ will clearly be a ring homomorphism provided that it is well-defined. Suppose then that $a/s = a'/s'$; then there exists $t \in S$ such that $(as' - a's)t = 0$, hence
+\[
+    (g(a)g(s') - g(a')g(s))g(t) = 0;
+\]
+now $g(t)$ is a unit in $B$, hence $g(a)g(s)^{-1} = g(a')g(s')^{-1}$.
+\end{proof}
+
+The ring $S^{-1}A$ and the homomorphism $f \colon A \to S^{-1}A$ have the following properties:
+\begin{enumerate}[1)]
+    \item $s \in S \implies f(s)$ is a unit in $S^{-1}A$;
+    \item $f(a) = 0 \implies as = 0$ for some $s \in S$;
+    \item Every element of $S^{-1}A$ is of the form $f(a)f(s)^{-1}$ for some $a \in A$ and some $s \in S$.
+\end{enumerate}
+
+Conversely, these three conditions determine the ring $S^{-1}A$ up to isomorphism. Precisely:
+
+\begin{corollary}\label{cor:characterization-localization}
+If $g \colon A \to B$ is a ring homomorphism such that
+\begin{enumerate}[i)]
+    \item $s \in S \implies g(s)$ is a unit in $B$;
+    \item $g(a) = 0 \implies as = 0$ for some $s \in S$;
+    \item Every element of $B$ is of the form $g(a)g(s)^{-1}$; then there is a unique isomorphism $h \colon S^{-1}A \to B$ such that $g = h \circ f$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+By \eqref{prop:universal-property} we have to show that $h \colon S^{-1}A \to B$, defined by
+\[
+    h(a/s) = g(a)g(s)^{-1}
+\]
+(this definition uses i)) is an isomorphism. By iii), $h$ is surjective. To show $h$ is injective, look at the kernel of $h$: if $h(a/s) = 0$, then $g(a) = 0$, hence by ii) we have $at = 0$ for some $t \in S$, hence $(a, s) \sim (0, 1)$, i.e., $a/s = 0$ in $S^{-1}A$.
+\end{proof}
+
+\begin{examples}\label{ex:localization-examples}
+\begin{enumerate}[(1)]
+    \item \label{item 1-ex:localization-examples} Let $\mathfrak{p}$ be a prime ideal of $A$. Then $S = A - \mathfrak{p}$ is multiplicatively closed (in fact $A - \mathfrak{p}$ is multiplicatively closed $\iff \mathfrak{p}$ is prime). We write $A_{\mathfrak{p}}$ for $S^{-1}A$ in this case. The elements $a/s$ with $a \in \mathfrak{p}$ form an ideal $\mathfrak{m}$ in $A_{\mathfrak{p}}$. If $b/t \notin \mathfrak{m}$, then $b \notin \mathfrak{p}$, hence $b \in S$ and therefore $b/t$ is a unit in $A_{\mathfrak{p}}$. It follows that if $\mathfrak{a}$ is an ideal in $A_{\mathfrak{p}}$ and $\mathfrak{a} \not\subseteq \mathfrak{m}$, then $\mathfrak{a}$ contains a unit and is therefore the whole ring. Hence $\mathfrak{m}$ is the only maximal ideal in $A_{\mathfrak{p}}$; in other words, $A_{\mathfrak{p}}$ is a \emph{local ring}\index{Local ring}.
+
+    The process of passing from $A$ to $A_{\mathfrak{p}}$ is called \emph{localization at $\mathfrak{p}$}\index{Localzation}.
+
+    \item \label{item 2-ex:localization-examples} $S^{-1}A$ is the zero ring $\iff 0 \in S$.
+    \item \label{item 3-ex:localization-examples} Let $f \in A$ and let $S = \{f^n\}_{n \geq 0}$. We write $A_f$ for $S^{-1}A$ in this case.
+    \item \label{item 4-ex:localization-examples} Let $\mathfrak{a}$ be any ideal in $A$, and let $S = 1 + \mathfrak{a} = $ set of all $1 + x$ where $x \in \mathfrak{a}$. Clearly $S$ is multiplicatively closed.
+    \item Special cases of \eqref{item 1-ex:localization-examples} and \eqref{item 3-ex:localization-examples}:
+    \begin{enumerate}[i)]
+        \item $A = \Z$, $\mathfrak{p} = (p)$, $p$ a prime number; $A_{\mathfrak{p}} = $ set of all rational numbers $m/n$ where $n$ is prime to $p$; if $f \in \Z$ and $f \neq 0$, then $A_f$ is the set of all rational numbers whose denominator is a power of $f$.
+
+        \item $A = k[t_1, \ldots, t_n]$, where $k$ is a field and the $t_i$ are independent indeterminates, $\mathfrak{p}$ a prime ideal in $A$. Then $A_{\mathfrak{p}}$ is the ring of all rational functions $f/g$, where $g \notin \mathfrak{p}$. If $V$ is the variety defined by the ideal $\mathfrak{p}$, that is to say the set of all $x = (x_1, \ldots, x_n) \in k^n$ such that $f(x) = 0$ whenever $f \in \mathfrak{p}$, then (provided $k$ is infinite) $A_{\mathfrak{p}}$ can be identified with the ring of all rational functions on $k^n$ which are defined at almost all points of $V$; it is the \emph{local ring of $k^n$ along the variety $V$}. This is the prototype of the local rings which arise in algebraic geometry.
+    \end{enumerate}
+\end{enumerate}
+\end{examples}
+
+The construction of $S^{-1}A$ can be carried through with an $A$-module $M$ in place of the ring $A$. Define a relation $\sim$ on $M \times S$ as follows:
+\[
+    (m, s) \sim (m', s') \iff \exists\, t \in S \text{ such that } t(sm' - s'm) = 0.
+\]
+As before, this is an equivalence relation. Let $m/s$ denote the equivalence class of the pair $(m, s)$, let $S^{-1}M$ denote the set of such fractions, and make $S^{-1}M$ into an $S^{-1}A$-module with the obvious definitions of addition and scalar multiplication. As in Examples \eqref{item 1-ex:localization-examples} and \eqref{item 3-ex:localization-examples} above, we write $M_{\mathfrak{p}}$ instead of $S^{-1}M$ when $S = A - \mathfrak{p}$ ($\mathfrak{p}$ prime) and $M_f$ when $S = \{f^n\}_{n \geq 0}$.
+
+Let $u \colon M \to N$ be an $A$-module homomorphism. Then it gives rise to an $S^{-1}A$-module homomorphism $S^{-1}u \colon S^{-1}M \to S^{-1}N$, namely $S^{-1}u$ maps $m/s$ to $u(m)/s$. We have $S^{-1}(v \circ u) = (S^{-1}v) \circ (S^{-1}u)$.
+
+\begin{proposition}\label{prop:localization-exact}
+The operation $S^{-1}$ is exact, i.e., if
+\[
+    M' \xrightarrow{f} M \xrightarrow{g} M''
+\]
+is exact at $M$, then
+\[
+    S^{-1}M' \xrightarrow{S^{-1}f} S^{-1}M \xrightarrow{S^{-1}g} S^{-1}M''
+\]
+is exact at $S^{-1}M$.
+\end{proposition}
+
+\begin{proof}
+We have $g \circ f = 0$, hence $S^{-1}g \circ S^{-1}f = S^{-1}(0) = 0$, hence $\Image(S^{-1}f) \subseteq \Ker(S^{-1}g)$. To prove the reverse inclusion, let $m/s \in \Ker(S^{-1}g)$, then
+\[
+    g(m)/s = 0 \text{ in } S^{-1}M'',
+\]
+hence there exists $t \in S$ such that $tg(m) = 0$ in $M''$. But $tg(m) = g(tm)$ since $g$ is an $A$-module homomorphism, hence $tm \in \Ker(g) = \Image(f)$ and therefore $tm = f(m')$ for some $m' \in M'$. Hence in $S^{-1}M$ we have
+\[
+    m/s = f(m')/st = (S^{-1}f)(m'/st) \in \Image(S^{-1}f).
+\]
+Hence $\Ker(S^{-1}g) \subseteq \Image(S^{-1}f)$.
+\end{proof}
+
+In particular, it follows from \eqref{prop:localization-exact} that if $M'$ is a submodule of $M$, the mapping $S^{-1}M' \to S^{-1}M$ is injective and therefore $S^{-1}M'$ can be regarded as a submodule of $S^{-1}M$. With this convention,
+
+\begin{corollary}\label{cor:localization-operations}
+Formation of fractions commutes with formation of finite sums, finite intersections and quotients. Precisely, if $N, P$ are submodules of an $A$-module $M$, then
+\begin{enumerate}[i)]
+    \item $S^{-1}(N + P) = S^{-1}(N) + S^{-1}(P)$
+    \item $S^{-1}(N \cap P) = S^{-1}(N) \cap S^{-1}(P)$
+    \item the $S^{-1}A$-modules $S^{-1}(M/N)$ and $(S^{-1}M)/(S^{-1}N)$ are isomorphic,
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(i) follows readily from the definitions and (ii) is easy to verify: if $y/s = z/t$ ($y \in N$, $z \in P$, $s, t \in S$) then $u(ty - sz) = 0$ for some $u \in S$, hence $w = uty = usz \in N \cap P$ and therefore $y/s = w/stu \in S^{-1}(N \cap P)$. Consequently $S^{-1}N \cap S^{-1}P \subseteq S^{-1}(N \cap P)$, and the reverse inclusion is obvious.
+
+(iii) Apply $S^{-1}$ to the exact sequence $0 \to N \to M \to M/N \to 0$.
+\end{proof}
+
+\begin{proposition}\label{prop:localization-tensor}
+Let $M$ be an $A$-module. Then the $S^{-1}A$-modules $S^{-1}M$ and $S^{-1}A \otimes_A M$ are isomorphic; more precisely, there exists a unique isomorphism $f \colon S^{-1}A \otimes_A M \to S^{-1}M$ for which
+\begin{equation}\label{eq:tensor-localization}
+    f((a/s) \otimes m) = am/s \text{ for all } a \in A,\ m \in M,\ s \in S. \tag{1}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The mapping $S^{-1}A \times M \to S^{-1}M$ defined by
+\[
+    (a/s, m) \mapsto am/s
+\]
+is $A$-bilinear, and therefore by the universal property \eqref{prop:universal-property} of the tensor product induces an $A$-homomorphism
+\[
+    f \colon S^{-1}A \otimes_A M \to S^{-1}M
+\]
+satisfying \eqref{eq:tensor-localization}. Clearly $f$ is surjective, and is uniquely defined by \eqref{eq:tensor-localization}.
+
+Let $\sum_i (a_i/s_i) \otimes m_i$ be any element of $S^{-1}A \otimes M$. If $s = \prod_i s_i \in S$, $t_i = \prod_{j \neq i} s_j$, we have
+\[
+    \sum_i \frac{a_i}{s_i} \otimes m_i = \sum_i \frac{a_i t_i}{s} \otimes m_i = \sum_i \frac{1}{s} \otimes a_i t_i m_i = \frac{1}{s} \otimes \sum_i a_i t_i m_i.
+\]
+so that every element of $S^{-1}A \otimes M$ is of the form $(1/s) \otimes m$. Suppose that $f((1/s) \otimes m) = 0$. Then $m/s = 0$, hence $tm = 0$ for some $t \in S$, and therefore
+\[
+    \frac{1}{s} \otimes m = \frac{t}{st} \otimes m = \frac{1}{st} \otimes tm = \frac{1}{st} \otimes 0 = 0.
+\]
+Hence $f$ is injective and therefore an isomorphism.
+\end{proof}
+
+\begin{corollary}\label{cor:flat-localization}
+$S^{-1}A$ is a flat $A$-module.
+\end{corollary}
+
+\begin{proof}
+    \eqref{prop:localization-exact} and\eqref{prop:localization-tensor}.
+\end{proof}
+
+\begin{proposition}\label{prop:localization-tensor-product}
+If $M, N$ are $A$-modules, there is a unique isomorphism of $S^{-1}A$-modules $f \colon S^{-1}M \otimes_{S^{-1}A} S^{-1}N \to S^{-1}(M \otimes_A N)$ such that
+\[
+    f((m/s) \otimes (n/t)) = (m \otimes n)/st.
+\]
+\end{proposition}
+
+\begin{proof}
+    Use \eqref{prop:localization-tensor} and the canonical isomorphisms of Chapter \ref{chapter2}.
+\end{proof}
+
+In particular, if $\mathfrak{p}$ is any prime ideal, then
+\[
+    M_{\mathfrak{p}} \otimes_{A_{\mathfrak{p}}} N_{\mathfrak{p}} \cong (M \otimes_A N)_{\mathfrak{p}}
+\]
+as $A_{\mathfrak{p}}$-modules.
+
+\section*{Local Properties}
+\addcontentsline{toc}{section}{Local Properties}
+A property $P$ of a ring $A$ (or of an $A$-module $M$) is said to be a \emph{local property} if the following is true:
+\[
+    A \text{ (or } M) \text{ has } P \iff A_{\mathfrak{p}} \text{ (or } M_{\mathfrak{p}}) \text{ has } P, \text{ for each prime ideal } \mathfrak{p} \text{ of } A.
+\]
+The following propositions give examples of local properties:
+
+\begin{proposition}\label{prop:zero-local}
+Let $M$ be an $A$-module. Then the following are equivalent:
+\begin{enumerate}[i)]
+    \item $M = 0$;
+    \item $M_{\mathfrak{p}} = 0$ for all prime ideals $\mathfrak{p}$ of $A$;
+    \item $M_{\mathfrak{m}} = 0$ for all maximal ideals $\mathfrak{m}$ of $A$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clearly (i) $\implies$ (ii) $\implies$ (iii). Suppose (iii) satisfied and $M \neq 0$. Let $x$ be a non-zero element of $M$, and let $\mathfrak{a} = \Ann(x)$; $\mathfrak{a}$ is an ideal $\neq (1)$, hence is contained in a maximal ideal $\mathfrak{m}$ by \eqref{cor:ideal-in-maximal}. Consider $x/1 \in M_{\mathfrak{m}}$. Since $M_{\mathfrak{m}} = 0$ we have $x/1 = 0$, hence $x$ is killed by some element of $A \setminus \mathfrak{m}$; but this is impossible since $\Ann(x) \subseteq \mathfrak{m}$.
+\end{proof}
+
+\begin{proposition}\label{prop:injective-surjective-local}
+Let $\phi \colon M \to N$ be an $A$-module homomorphism. Then the following are equivalent:
+\begin{enumerate}[i)]
+    \item $\phi$ is injective;
+    \item $\phi_{\mathfrak{p}} \colon M_{\mathfrak{p}} \to N_{\mathfrak{p}}$ is injective for each prime ideal $\mathfrak{p}$;
+    \item $\phi_{\mathfrak{m}} \colon M_{\mathfrak{m}} \to N_{\mathfrak{m}}$ is injective for each maximal ideal $\mathfrak{m}$.
+\end{enumerate}
+Similarly with ``injective'' replaced by ``surjective'' throughout.
+\end{proposition}
+
+\begin{proof}
+(i) $\implies$ (ii). $0 \to M \to N$ is exact, hence $0 \to M_{\mathfrak{p}} \to N_{\mathfrak{p}}$ is exact, i.e.\ $\phi_{\mathfrak{p}}$ is injective.
+
+(ii) $\implies$ (iii) because a maximal ideal is prime.
+
+(iii) $\implies$ (i). Let $M' = \Ker(\phi)$, then the sequence $0 \to M' \to M \to N$ is exact, hence $0 \to M'_{\mathfrak{m}} \to M_{\mathfrak{m}} \to N_{\mathfrak{m}}$ is exact by \eqref{prop:localization-exact} and therefore $M'_{\mathfrak{m}} \cong \Ker(\phi_{\mathfrak{m}}) = 0$ since $\phi_{\mathfrak{m}}$ is injective. Hence $M' = 0$ by \eqref{prop:zero-local}, hence $\phi$ is injective.
+
+For the other part of the proposition, just reverse all the arrows.
+\end{proof}
+
+Flatness is a local property:
+
+\begin{proposition}\label{prop:flat-local}
+For any $A$-module $M$, the following statements are equivalent:
+\begin{enumerate}[i)]
+    \item $M$ is a flat $A$-module;
+    \item $M_{\mathfrak{p}}$ is a flat $A_{\mathfrak{p}}$-module for each prime ideal $\mathfrak{p}$;
+    \item $M_{\mathfrak{m}}$ is a flat $A_{\mathfrak{m}}$-module for each maximal ideal $\mathfrak{m}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) $\implies$ (ii) by \eqref{prop:localization-tensor} and \eqref{ex:flat-base-change}.
+
+(ii) $\implies$ (iii) O.K.
+
+(iii) $\implies$ (i). If $N \to P$ is a homomorphism of $A$-modules, and $\mathfrak{m}$ is any maximal ideal of $A$, then
+\begin{align*}
+    N \to P \text{ injective } &\implies N_{\mathfrak{m}} \to P_{\mathfrak{m}} \text{ injective, by \eqref{prop:injective-surjective-local}} \\
+    &\implies N_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \to P_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \text{ injective, by \eqref{prop:flat-equivalent}} \\
+    &\implies (N \otimes_A M)_{\mathfrak{m}} \to (P \otimes_A M)_{\mathfrak{m}} \text{ injective, by \eqref{prop:localization-tensor-product}} \\
+    &\implies N \otimes_A M \to P \otimes_A M \text{ injective, by \eqref{prop:injective-surjective-local}.}
+\end{align*}
+Hence $M$ is flat by \eqref{prop:flat-equivalent}.
+\end{proof}
+
+\section*{Extended and Contracted Ideals in Rings of Fractions}
+\addcontentsline{toc}{section}{Extended and Contracted Ideals in Rings of Fractions}
+
+Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$ and $f \colon A \to S^{-1}A$ the natural homomorphism, defined by $f(a) = a/1$. Let $C$ be the set of contracted ideals in $A$, and let $E$ be the set of extended ideals in $S^{-1}A$ (cf.\ \eqref{prop:finitely-generated-extension}). If $\mathfrak{a}$ is an ideal in $A$, its extension $\mathfrak{a}^e$ in $S^{-1}A$ is $S^{-1}\mathfrak{a}$ (for any $y \in \mathfrak{a}^e$ is of the form $\sum a_i/s_i$, where $a_i \in \mathfrak{a}$ and $s_i \in S$; bring this fraction to a common denominator).
+
+\begin{proposition}\label{prop:extension-ideals}
+\begin{enumerate}[i)]
+    \item \label{item 1:prop:extension-ideals}Every ideal in $S^{-1}A$ is an extended ideal.
+    \item \label{item 2:prop:extension-ideals}If $\mathfrak{a}$ is an ideal in $A$, then $\mathfrak{a}^{ec} = \bigcup_{s \in S} (\mathfrak{a} : s)$. Hence $\mathfrak{a}^e = (1)$ if and only if $\mathfrak{a}$ meets $S$.
+    \item \label{item 3:prop:extension-ideals}$\mathfrak{a} \in C \iff$ no element of $S$ is a zero-divisor in $A/\mathfrak{a}$.
+    \item \label{item 4:prop:extension-ideals}The prime ideals of $S^{-1}A$ are in one-to-one correspondence ($\mathfrak{p} \mapsto S^{-1}\mathfrak{p}$) with the prime ideals of $A$ which don't meet $S$.
+    \item \label{item 5:prop:extension-ideals}The operation $S^{-1}$ commutes with formation of finite sums, products, intersections and radicals.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \begin{enumerate}[i)]
+        \item Let $\mathfrak{b}$ be an ideal in $S^{-1}A$, and let $x/s \in \mathfrak{b}$. Then $x/1 \in \mathfrak{b}$, hence $x \in \mathfrak{b}^c$ and therefore $x/s \in \mathfrak{b}^{ec}$. Since $\mathfrak{b} \supseteq \mathfrak{b}^{ce}$ in any case \eqref{prop:extension-contraction-properties}, it follows that $\mathfrak{b} = \mathfrak{b}^{ce}$.
+        \item $x \in \mathfrak{a}^{ec} = (S^{-1}\mathfrak{a})^c \iff x/1 = a/s$ for some $a \in \mathfrak{a}$, $s \in S \iff (xs - a)t = 0$ for some $t \in S \iff xst \in \mathfrak{a} \iff x \in \bigcup_{s \in S} (\mathfrak{a} : s)$.
+        \item $\mathfrak{a} \in C \iff \mathfrak{a}^{ec} \subseteq \mathfrak{a} \iff (sx \in \mathfrak{a}$ for some $s \in S \implies x \in \mathfrak{a}) \iff$ no $s \in S$ is a zero-divisor in $A/\mathfrak{a}$.
+        \item If $\mathfrak{q}$ is a prime ideal in $S^{-1}A$, then $\mathfrak{q}^c$ is a prime ideal in $A$ (this much is true for any ring homomorphism). Conversely, if $\mathfrak{p}$ is a prime ideal in $A$, then $A/\mathfrak{p}$ is an integral domain; if $S$ is the image of $S$ in $A/\mathfrak{p}$, we have $S^{-1}A/S^{-1}\mathfrak{p} \cong S^{-1}(A/\mathfrak{p})$ which is either $0$ or else is contained in the field of fractions of $A/\mathfrak{p}$ and is therefore an integral domain, and therefore $S^{-1}\mathfrak{p}$ is either prime or is the unit ideal; by (i) the latter possibility occurs if and only if $\mathfrak{p}$ meets $S$.
+        \item For sums and products, this follows from \eqref{ex:extension-contraction-operations}; for intersections, from \eqref{cor:localization-operations}. As to radicals, we have $S^{-1}r(\mathfrak{a}) \subseteq r(S^{-1}\mathfrak{a})$ from \eqref{ex:extension-contraction-operations}, and the proof of the reverse inclusion is a routine verification which we leave to the reader. \qedhere
+    \end{enumerate}
+\end{proof}
+
+\begin{remark}
+\begin{enumerate}[1)]
+    \item If $\mathfrak{a}, \mathfrak{b}$ are ideals of $A$, the formula
+    \[
+        S^{-1}(\mathfrak{a} : \mathfrak{b}) = (S^{-1}\mathfrak{a} : S^{-1}\mathfrak{b})
+    \]
+    is true provided the ideal $\mathfrak{b}$ is finitely generated: see \eqref{cor:localization-colon}.
+
+    \item The proof in \eqref{prop:nilradical-intersection} that if $f \in A$ is not nilpotent there is a prime ideal of $A$ which does not contain $f$ can be expressed more concisely in the language of rings of fractions. Since the set $S = \{f^n\}_{n \geq 0}$ does not contain $0$, the ring $S^{-1}A = A_f$ is not the zero ring and therefore by \eqref{thm:maximal-ideal-exists} has a maximal ideal, whose contraction in $A$ is a prime ideal $\mathfrak{p}$ which does not meet $S$ by \eqref{prop:extension-ideals}; hence $f \notin \mathfrak{p}$.
+\end{enumerate}
+\end{remark}
+
+\begin{corollary}\label{cor:localization-nilradical}
+If $\mathfrak{R}$ is the nilradical of $A$, the nilradical of $S^{-1}A$ is $S^{-1}\mathfrak{R}$.
+\end{corollary}
+
+\begin{corollary}\label{cor:spec-localization}
+If $\mathfrak{p}$ is a prime ideal of $A$, the prime ideals of the local ring $A_{\mathfrak{p}}$ are in one-to-one correspondence with the prime ideals of $A$ contained in $\mathfrak{p}$.
+\end{corollary}
+
+\begin{proof}
+Take $S = A - \mathfrak{p}$ in \eqref{prop:extension-ideals} (iv).
+\end{proof}
+
+\begin{remark}
+Thus the passage from $A$ to $A_{\mathfrak{p}}$ cuts out all prime ideals except those contained in $\mathfrak{p}$. In the other direction, the passage from $A$ to $A/\mathfrak{p}$ cuts out all prime ideals except those containing $\mathfrak{p}$. Hence if $\mathfrak{p}, \mathfrak{q}$ are prime ideals such that $\mathfrak{p} \supseteq \mathfrak{q}$, then by localizing with respect to $\mathfrak{p}$ and taking the quotient mod $\mathfrak{q}$ (in either order: these two operations commute, by \eqref{cor:localization-operations}), we restrict our attention to those prime ideals which lie between $\mathfrak{p}$ and $\mathfrak{q}$. In particular, if $\mathfrak{p} = \mathfrak{q}$ we end up with a field, called the \emph{residue field at $\mathfrak{p}$}, which can be obtained either as the field of fractions of the integral domain $A/\mathfrak{p}$ or as the residue field of the local ring $A_{\mathfrak{p}}$.
+\end{remark}
+
+\begin{proposition}\label{prop:localization-annihilator}
+    Let $M$ be a finitely generated $A$-module, $S$ a multiplicatively closed subset of $A$. Then $S^{-1}(\Ann(M)) = \Ann(S^{-1}M)$.
+\end{proposition}
+
+\begin{proof}
+    If this is true for two $A$-modules $M, N$, it is true for $M + N$:
+    \begin{align*}
+        S^{-1}(\Ann(M + N)) &= S^{-1}(\Ann(M) \cap \Ann(N)) && \text{by \eqref{ex:annihilator-properties}} \\
+        &= S^{-1}(\Ann(M)) \cap S^{-1}(\Ann(N)) && \text{by \eqref{cor:localization-operations}} \\
+        &= \Ann(S^{-1}M) \cap \Ann(S^{-1}N) && \text{by hypothesis} \\
+        &= \Ann(S^{-1}M + S^{-1}N) = \Ann(S^{-1}(M + N)).
+    \end{align*}
+    Hence it is enough to prove \eqref{prop:localization-annihilator} for $M$ generated by a single element: then $M \cong A/\mathfrak{a}$ (as $A$-module), where $\mathfrak{a} = \Ann(M)$; $S^{-1}M \cong (S^{-1}A)/(S^{-1}\mathfrak{a})$ by \eqref{cor:localization-operations}, so that $\Ann(S^{-1}M) = S^{-1}\mathfrak{a} = S^{-1}(\Ann(M))$.
+\end{proof}
+
+\begin{corollary}\label{cor:localization-colon}
+    If $N, P$ are submodules of an $A$-module $M$ and if $P$ is finitely generated, then $S^{-1}(N : P) = (S^{-1}N : S^{-1}P)$.
+\end{corollary}
+
+\begin{proof}
+    $(N : P) = \Ann((N + P)/N)$ by \eqref{ex:annihilator-properties}; now apply \eqref{prop:localization-annihilator}.
+\end{proof}
+
+\begin{proposition}\label{prop:contracted-ideal}
+Let $A \to B$ be a ring homomorphism and let $\mathfrak{p}$ be a prime ideal of $A$. Then $\mathfrak{p}$ is the contraction of a prime ideal of $B$ if and only if $\mathfrak{p}^{ec} = \mathfrak{p}$.
+\end{proposition}
+
+\begin{proof}
+If $\mathfrak{p} = \mathfrak{q}^c$ then $\mathfrak{p}^{ec} = \mathfrak{p}$ by \eqref{prop:extension-contraction-properties}. Conversely, if $\mathfrak{p}^{ec} = \mathfrak{p}$, let $S$ be the image of $A - \mathfrak{p}$ in $B$. Then $\mathfrak{p}^e$ does not meet $S$, therefore by \eqref{prop:extension-ideals} its extension in $S^{-1}B$ is a proper ideal and hence is contained in a maximal ideal $\mathfrak{m}$ of $S^{-1}B$. If $\mathfrak{q}$ is the contraction of $\mathfrak{m}$ in $B$, then $\mathfrak{q}$ is prime, $\mathfrak{q} \supseteq \mathfrak{p}^e$ and $\mathfrak{q} \cap S = \varnothing$. Hence $\mathfrak{q}^c = \mathfrak{p}$.
+\end{proof}
+
+\input{chapter03-exercises.tex}
