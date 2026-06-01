@@ -155,73 +155,35 @@ Please contribute improvements in the following ways:
 
 ## 版权声明 / Copyright Notice
 
-### 原书版权 / Original Book Copyright
+## 许可证
 
-原书《Introduction to Commutative Algebra》版权归 **M. F. Atiyah, I. G. MacDonald** 及 **Addison-Wesley Publishing Company** 所有。
+## 许可证 | License
 
-The original book *Introduction to Commutative Algebra* is copyrighted by **M. F. Atiyah, I. G. MacDonald** and **Addison-Wesley Publishing Company**.
+本作品采用 **CC BY-NC-SA 4.0 国际许可证** 授权。  
+This work is licensed under the **CC BY-NC-SA 4.0 International License**.
 
-本重排版本仅为**学习和研究目的**制作，并非官方版本。我们只重排了书籍的**形式**，没有改变任何**内容**。
+[![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-This typeset version is produced solely for **educational and research purposes** and is not an official edition. We have only retypeset the **format** of the book and have not altered any **content**.
+您可以自由地：  
+You are free to:
+- **分享** — 在任何媒介以任何形式复制、发行本作品  
+  **Share** — copy and redistribute the material in any medium or format
+- **改编** — 二次创作、转换或以本作品为基础进行创作  
+  **Adapt** — remix, transform, and build upon the material
 
-### 重排代码版权 / Typesetting Code Copyright
+在以下条件下：  
+Under the following terms:
+- **署名** — 您必须给出适当的署名，提供指向本许可证的链接，并说明是否进行了更改  
+  **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made
+- **非商业性** — 您不得将本作品用于商业目的  
+  **NonCommercial** — You may not use the material for commercial purposes
+- **相同方式共享** — 如果您二次创作、转换或以本作品为基础进行创作，您必须采用与原作相同的许可证分发您的作品  
+  **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original
 
-本项目的所有LaTeX排版代码以**MIT许可证**开源。
+完整许可证文本 | Full license text:  
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
-All LaTeX typesetting code in this project is open source under the **MIT License**.
-
-#### MIT License (英文原版 / Official English Version)
-
-```
-MIT License
-
-Copyright (c) 2026 Typesetting Project Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-#### MIT许可证（中文翻译仅供参考 / Chinese Translation for Reference Only）
-
-```
-MIT许可证
-
-版权所有 (c) 2026 重排项目组
-
-特此免费授予任何获得本软件副本和相关文档文件（以下简称"软件"）的人不受限制地处理本软件的权利，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或出售本软件的副本，并允许向其提供本软件的人这样做，符合以下条件：
-
-上述版权声明和本许可声明应包含在本软件的所有副本或主要部分中。
-
-本软件按"原样"提供，不提供任何形式的明示或暗示保证，包括但不限于对适销性、特定用途适用性和非侵权性的保证。在任何情况下，作者或版权持有人均不对因本软件或使用本软件或其他交易中的使用而引起的任何索赔、损害或其他责任承担责任，无论是在合同诉讼、侵权行为或其他方面。
-```
-
-### 使用限制 / Usage Restrictions
-
-- 本项目**不涉及任何商业行为**，也不提供印刷成品的售卖
-- 禁止将本重排版用于任何商业目的
-- 如果您需要正式出版物，请**支持正版原书**
-
-- This project **does not involve any commercial activities** and does not sell printed copies
-- Any commercial use of this typeset version is strictly prohibited
-- If you need an official publication, please **support the original正版 book**
-
----
+Copyright (c) 2026 VesperaZephyr
 
 ## 致谢 / Acknowledgments
 
