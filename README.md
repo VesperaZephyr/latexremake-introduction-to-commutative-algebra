@@ -149,7 +149,7 @@ Please contribute improvements in the following ways:
 
 1. 提交GitHub Issue详细描述问题 / Submit a GitHub Issue describing the problem in detail
 2. Fork本仓库，修改后提交Pull Request / Fork this repository and submit a Pull Request with your changes
-3. 发送邮件到vesperazephy2006@gmai.com.
+3. 发送邮件到vesperazephyr2006@gmai.com.
 
 ---
 
