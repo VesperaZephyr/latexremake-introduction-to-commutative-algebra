@@ -25,7 +25,7 @@ However, due to the book's age, scanned electronic copies available online gener
 - **专业LaTeX排版**：数学公式清晰锐利，字体选用与原书风格相近的现代衬线体
 - **优化的阅读体验**：正文行距和页边距经过仔细调整，适合屏幕阅读和打印
 - **完整的超链接支持**：目录、引用、定理编号、索引页码均为可点击超链接，方便跳转
-- **完全开源**：所有LaTeX源代码以MIT许可证托管，任何人都可以自由获取和改进
+- **开源**：所有LaTeX源代码以CC BY-NC-SA 4.0 国际许可证托管，任何人都可以自由获取和改进
 
 - **Completely faithful to the original**: Theorem numbering, proof structure, and exercise arrangement strictly follow the 1969 original edition with no content modifications
 - **Professional LaTeX typesetting**: Crisp and sharp mathematical formulas with modern serif fonts similar in style to the original book
