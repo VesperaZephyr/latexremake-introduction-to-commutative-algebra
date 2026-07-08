@@ -31,7 +31,7 @@ If $A$ is an integral domain and $S = A \setminus \{0\}$, then $S^{-1}A$ is the 
 
 The ring $S^{-1}A$ is called the \emph{ring of fractions}\index{Ring!of fractions}\index{Fractions, ring of} of $A$ with respect to $S$. It has a universal property:
 
-\begin{proposition}\label{prop:universal-property}
+\begin{proposition}\label{pro:universal property of ring of fractions}
 Let $g \colon A \to B$ be a ring homomorphism such that $g(s)$ is a unit in $B$ for all $s \in S$. Then there exists a unique ring homomorphism $h \colon S^{-1}A \to B$ such that $g = h \circ f$.
 \end{proposition}
 
@@ -68,7 +68,7 @@ If $g \colon A \to B$ is a ring homomorphism such that
 \end{corollary}
 
 \begin{proof}
-By \eqref{prop:universal-property} we have to show that $h \colon S^{-1}A \to B$, defined by
+By \eqref{pro:universal property of ring of fractions} we have to show that $h \colon S^{-1}A \to B$, defined by
 \[
     h(a/s) = g(a)g(s)^{-1}
 \]
@@ -104,7 +104,7 @@ Let $u \colon M \to N$ be an $A$-module homomorphism. Then it gives rise to an $
 \begin{proposition}\label{prop:localization-exact}
 The operation $S^{-1}$ is exact, i.e., if
 \[
-    M' \xrightarrow{f} M \xrightarrow{g} M''
+    M' \stackrel{f}{\longrightarrow} M \stackrel{g}{\longrightarrow} M''
 \]
 is exact at $M$, then
 \[
@@ -154,7 +154,7 @@ The mapping $S^{-1}A \times M \to S^{-1}M$ defined by
 \[
     (a/s, m) \mapsto am/s
 \]
-is $A$-bilinear, and therefore by the universal property \eqref{prop:universal-property} of the tensor product induces an $A$-homomorphism
+is $A$-bilinear, and therefore by the universal property \eqref{prop:tensor-universal} of the tensor product induces an $A$-homomorphism
 \[
     f \colon S^{-1}A \otimes_A M \to S^{-1}M
 \]
@@ -176,7 +176,7 @@ $S^{-1}A$ is a flat $A$-module.
 \end{corollary}
 
 \begin{proof}
-    \eqref{prop:localization-exact} and\eqref{prop:localization-tensor}.
+    \eqref{prop:localization-exact} and \eqref{prop:localization-tensor}.
 \end{proof}
 
 \begin{proposition}\label{prop:localization-tensor-product}
@@ -232,7 +232,7 @@ Similarly with ``injective'' replaced by ``surjective'' throughout.
 
 (ii) $\implies$ (iii) because a maximal ideal is prime.
 
-(iii) $\implies$ (i). Let $M' = \Ker(\phi)$, then the sequence $0 \to M' \to M \to N$ is exact, hence $0 \to M'_{\mathfrak{m}} \to M_{\mathfrak{m}} \to N_{\mathfrak{m}}$ is exact by \eqref{prop:localization-exact} and therefore $M'_{\mathfrak{m}} \cong \Ker(\phi_{\mathfrak{m}}) = 0$ since $\phi_{\mathfrak{m}}$ is injective. Hence $M' = 0$ by \eqref{prop:zero-local}, hence $\phi$ is injective.
+(iii) $\implies$ (i). Let $M' = \Ker(\phi)$, then the sequence $0 \longrightarrow M' \longrightarrow M \longrightarrow N$ is exact, hence $0 \longrightarrow M'_{\mathfrak{m}} \longrightarrow M_{\mathfrak{m}} \longrightarrow N_{\mathfrak{m}}$ is exact by \eqref{prop:localization-exact} and therefore $M'_{\mathfrak{m}} \cong \Ker(\phi_{\mathfrak{m}}) = 0$ since $\phi_{\mathfrak{m}}$ is injective. Hence $M' = 0$ by \eqref{prop:zero-local}, hence $\phi$ is injective.
 
 For the other part of the proposition, just reverse all the arrows.
 \end{proof}
