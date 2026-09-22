@@ -7,8 +7,7 @@ We shall begin by reviewing rapidly the definition and elementary properties of 
 
 
 %=============================================================================
-\section*{Rings and Ring Homomorphisms}
-\addcontentsline{toc}{section}{Rings and Ring Homomorphisms}
+\subsec{Rings and Ring Homomorphisms}
 
 A \emph{ring}\index{Ring} $A$ is a set with two binary operations---(addition and multiplication) such that
 \begin{enumerate}
@@ -54,8 +53,7 @@ If $f \colon A \to B$, $g \colon B \to C$ are ring homomorphisms then so is thei
 
 
 %=============================================================================
-\section*{Ideals. Quotient Rings}
-\addcontentsline{toc}{section}{Ideals. Quotient Rings}
+\subsec{Ideals. Quotient Rings}
 
 An \emph{ideal}\index{Ideal(s)} $\mathfrak{a}$ of a ring $A$ is a subset of $A$ which is an additive subgroup and is such that $A\mathfrak{a} \subseteq \mathfrak{a}$ (i.e., $x \in A$ and $y \in \mathfrak{a}$ imply $xy \in \mathfrak{a}$). The quotient group $A/\mathfrak{a}$ inherits a uniquely defined multiplication from $A$ which makes it into a ring, called the \emph{quotient ring}\index{Ring!quotient} (or \emph{residue-class ring}) $A/\mathfrak{a}$. The elements of $A/\mathfrak{a}$ are the cosets of $\mathfrak{a}$ in $A$, and the mapping $\varphi \colon A \to A/\mathfrak{a}$ which maps each $x \in A$ to its coset $x + \mathfrak{a}$ is a surjective ring homomorphism.
 
@@ -71,8 +69,7 @@ We shall sometimes use the notation $x \equiv y \pmod{\mathfrak{a}}$; this means
 
 
 %=============================================================================
-\section*{Zero-Divisors. Nilpotent Elements. Units}
-\addcontentsline{toc}{section}{Zero-Divisors. Nilpotent Elements. Units}
+\subsec{Zero-Divisors. Nilpotent Elements. Units}
 
 A \emph{zero-divisor}\index{Zero-divisor} in a ring $A$ is an element $x$ which ``divides $0$'', i.e., for which there exists $y \neq 0$ in $A$ such that $xy = 0$. A ring with no zero-divisors $\neq 0$ (and in which $1 \neq 0$) is called an \emph{integral domain}\index{Domain, integral}. For example, $\Z$ and $k[x_1, \ldots, x_n]$ ($k$ a field, $x_i$ indeterminates) are integral domains.
 
@@ -103,8 +100,7 @@ iii) $\implies$ i). Let $x$ be an element of $A$ which is not a unit. Then $(x) 
 
 
 %=============================================================================
-\section*{Prime Ideals and Maximal Ideals}
-\addcontentsline{toc}{section}{Prime Ideals and Maximal Ideals}
+\subsec{Prime Ideals and Maximal Ideals}
 
 An ideal $\mathfrak{p}$ in $A$ is \emph{prime}\index{Ideal(s)!prime}\index{Prime ideal(s)} if $\mathfrak{p} \neq (1)$ and if $xy \in \mathfrak{p} \implies x \in \mathfrak{p}$ or $y \in \mathfrak{p}$.
 
@@ -176,8 +172,7 @@ A ring with only a finite number of maximal ideals is called \emph{semi-local}\i
 
 
 %=============================================================================
-\section*{Nilradical and Jacobson Radical}
-\addcontentsline{toc}{section}{Nilradical and Jacobson Radical}
+\subsec{Nilradical and Jacobson Radical}
 
 \begin{proposition}\label{prop:nilradical-ideal}
 The set $\nilrad$ of all nilpotent elements in a ring $A$ is an ideal, and $A/\nilrad$ has no nilpotent element $\neq 0$.
@@ -223,8 +218,7 @@ $\impliedby$: Suppose $x \notin \mathfrak{m}$ for some maximal ideal $\mathfrak{
 
 
 %=============================================================================
-\section*{Operations on Ideals}
-\addcontentsline{toc}{section}{Operations on Ideals}
+\subsec{Operations on Ideals}
 
 If $\mathfrak{a}$, $\mathfrak{b}$ are ideals in a ring $A$, their \emph{sum}\index{Ideal(s)!sum of} $\mathfrak{a} + \mathfrak{b}$ is the set of all $x + y$ where $x \in \mathfrak{a}$ and $y \in \mathfrak{b}$. It is the smallest ideal containing $\mathfrak{a}$ and $\mathfrak{b}$. More generally, we may define the sum $\sum_{i \in I} \mathfrak{a}_i$ of any family (possibly infinite) of ideals $\mathfrak{a}_i$ of $A$; its elements are all sums $\sum x_i$, where $x_i \in \mathfrak{a}_i$ for all $i \in I$ and almost all of the $x_i$ (i.e., all but a finite set) are zero. It is the smallest ideal of $A$ which contains all the ideals $\mathfrak{a}_i$.
 
@@ -393,8 +387,7 @@ $D = r(D) = r(\bigcup_{x \neq 0} \Ann(x)) = \bigcup_{x \neq 0} r(\Ann(x))$.
 $r(\mathfrak{a} + \mathfrak{b}) = r(r(\mathfrak{a}) + r(\mathfrak{b})) = r((1)) = (1)$, hence $\mathfrak{a} + \mathfrak{b} = (1)$.
 \end{proof}
 
-\section*{Extension and Contraction}
-\addcontentsline{toc}{section}{Extension and Contraction}
+\subsec{Extension and Contraction}
 
 Let $f \colon A \to B$ be a ring homomorphism. If $\mathfrak{a}$ is an ideal in $A$, the set $f(\mathfrak{a})$ is not necessarily an ideal in $B$ (e.g., let $f$ be the embedding of $\mathbb{Z}$ in $\mathbb{Q}$, the field of rationals, and take $\mathfrak{a}$ to be any non-zero ideal in $\mathbb{Z}$.) We define the \emph{extension}\index{Extension of an ideal} $\mathfrak{a}^e$ of $\mathfrak{a}$ to be the ideal $Bf(\mathfrak{a})$ generated by $f(\mathfrak{a})$ in $B$: explicitly, $\mathfrak{a}^e$ is the set of all sums $\sum y_i f(x_i)$ where $x_i \in \mathfrak{a}$, $y_i \in B$.
 

@@ -10,8 +10,7 @@ Two of the important properties of localization are that it preserves exactness 
 
 For the study of completions we shall find it necessary to introduce graded rings. The prototype of a graded ring is the ring of polynomials $k[x_1, \ldots, x_n]$, the grading being the usual one obtained by taking the degree of each variable to be 1. Just as ungraded rings are the foundation for affine algebraic geometry, so graded rings are the foundation for projective algebraic geometry. They are therefore of considerable geometric importance. The important construction of the associated graded ring $G_{\mathfrak{a}}(A)$ of an ideal $\mathfrak{a}$ of $A$, which we shall meet, has a very definite geometrical interpretation. For example, if $A$ is the local ring of a point $P$ on a variety $V$ with $\mathfrak{a}$ as maximal ideal, then $G_{\mathfrak{a}}(A)$ corresponds to the projective tangent cone at $P$, i.e. all the lines through $P$ which are tangent to $V$ at $P$. This geometrical picture should help to explain the significance of $G_{\mathfrak{a}}(A)$ in connection with the properties of $V$ near $P$ and in particular in connection with the study of the completion $\widehat{A}$.
 
-\section*{Topologies and Completions}
-\addcontentsline{toc}{section}{Topologies and Completions}
+\subsec{Topologies and Completions}
 Let $G$ be a topological abelian group (written additively), not necessarily Hausdorff: thus $G$ is both a topological space and an abelian group, and the two structures on $G$ are compatible in the sense that the mappings $G \times G \to G$ and $G \to G$, defined by $(x, y) \mapsto x + y$ and $x \mapsto -x$ respectively, are continuous. If $\{0\}$ is closed in $G$, then the diagonal is closed in $G \times G$ (being the inverse image of $\{0\}$ under the mapping $(x,y) \mapsto x - y$) and so $G$ is Hausdorff. If $a$ is a fixed element of $G$ the translation $T_a$ defined by $T_a(x) = x + a$ is a homeomorphism of $G$ onto $G$ (for $T_a$ is continuous, and its inverse is $T_{-a}$); hence if $U$ is any neighborhood of $0$ in $G$, then $U + a$ is a neighborhood of $a$ in $G$, and conversely every neighborhood of $a$ appears in this form. Thus the topology of $G$ is uniquely determined by the neighborhoods of $0$ in $G$.
 
 \begin{lemma}\label{lem:top-group-hausdorff}
@@ -186,8 +185,7 @@ Likewise for an $A$-module $M$: take $G = M$, $G_n = \mathfrak{a}^n M$. This def
 \end{enumerate}
 \end{examples}
 
-\section*{Filtrations}
-\addcontentsline{toc}{section}{Filtrations}
+\subsec{Filtrations}
 The $\mathfrak{a}$-topology of an $A$-module $M$ was defined by taking the submodules $\mathfrak{a}^n M$ as basic neighborhoods of $0$, but there are other ways of defining the same topology. An (infinite) chain $M = M_0 \supseteq M_1 \supseteq \cdots \supseteq M_n \supseteq \cdots$, where the $M_n$ are submodules of $M$, is called a \emph{filtration}\index{Filtration} of $M$, and denoted by $(M_n)$. It is an \emph{$\mathfrak{a}$-filtration} if $\mathfrak{a} M_n \subseteq M_{n+1}$ for all $n$, and a \emph{stable $\mathfrak{a}$-filtration} if $\mathfrak{a} M_n = M_{n+1}$ for all sufficiently large $n$. Thus $(\mathfrak{a}^n M)$ is a stable $\mathfrak{a}$-filtration.
 
 \begin{lemma}\label{lem:stable-filtration-bounded}
@@ -198,8 +196,7 @@ If $(M_n)$, $(M'_n)$ are stable $\mathfrak{a}$-filtrations of $M$, then they hav
 Enough to take $M'_n = \mathfrak{a}^n M$. Since $\mathfrak{a} M_n \subseteq M_{n+1}$ for all $n$, we have $\mathfrak{a}^n M \subseteq M_n$; also $\mathfrak{a} M_n = M_{n+1}$ for all $n \geq n_0$ say, hence $M_{n+n_0} = \mathfrak{a}^n M_{n_0} \subseteq \mathfrak{a}^n M$.
 \end{proof}
 
-\section*{Graded Rings and Modules}
-\addcontentsline{toc}{section}{Graded Rings and Modules}
+\subsec{Graded Rings and Modules}
 A \emph{graded ring}\index{Ring!graded} is a ring $A$ together with a family $(A_n)_{n \geq 0}$ of subgroups of the additive group of $A$, such that $A = \bigoplus_{n=0}^\infty A_n$ and $A_m A_n \subseteq A_{m+n}$ for all $m, n \geq 0$. Thus $A_0$ is a subring of $A$, and each $A_n$ is an $A_0$-module.
 
 \begin{example}
@@ -430,8 +427,7 @@ We can restate \eqref{cor:10.20} slightly differently if we recall that an $\mat
     Let $A$ be a Noetherian ring, $\mathfrak{p}$ a prime ideal of $A$. Then the intersection of all $\mathfrak{p}$-primary ideals of $A$ is the kernel of $A \to A_{\mathfrak{p}}$. \qed
 \end{corollary}
 
-\section*{The Associated Graded Ring}
-\addcontentsline{toc}{section}{The Associated Graded Ring}
+\subsec{The Associated Graded Ring}
 Let $A$ be a ring and $\mathfrak{a}$ an ideal of $A$. Define
 \[
 G(A) \,(= G_{\mathfrak{a}}(A)) = \bigoplus_{n=0}^{\infty} \mathfrak{a}^n/\mathfrak{a}^{n+1} \qquad (\mathfrak{a}^0 = A).

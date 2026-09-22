@@ -18,6 +18,9 @@
 \usepackage{etoolbox}
 \usepackage{hyperref}
 \usepackage{cleveref}
+% 注意: 不加载 bookmark 包。在 xelatex(xdvipdfmx) 下 bookmark 会误选
+% bkm-dvipdfm.def 后端, 反而停止写出 main.out, 导致书签无法更新。
+% hyperref 原生已支持 bookmarksnumbered/bookmarksopen(见 hypersetup), 足以满足需求。
 % 设置英文名称
 \ctexset{
   contentsname      = Contents,           % 目录标题
@@ -72,11 +75,20 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=linkblue,             % 内部链接(交叉引用) - 蓝色
-    hyperindex=true, 
+    hyperindex=true,
+    bookmarksnumbered=true,         % 书签显示章节编号(章)
+    bookmarksopen=true,             % 书签面板默认展开
+    bookmarksopenlevel=1,
     pdfauthor={M. F. Atiyah, I. G. MacDonald},
     pdftitle={Introduction to Commutative Algebra},
     pdfsubject={Commutative Algebra}
 }
+
+% ---- 编号子节(替换原 \section*{...}+\addcontentsline) ----
+% 原 \section* 不建立自身锚点, 其书签/目录链接会继承上一个 theorem/item 环境的锚点,
+% 导致点击书签跳转到错误位置。改为编号 \section: 自动获得正确锚点, 且书签/目录/标题
+% 统一显示章节编号(如 1.1)。配合 hypersetup 中的 bookmarksnumbered=true, 书签即带章号。
+\newcommand{\subsec}[1]{\section{#1}}
 
 % 页眉页脚
 \pagestyle{fancy}
@@ -226,6 +238,10 @@ Atiyah 与 Macdonald 的《交换代数导引》(\textit{Introduction to Commuta
 
 % 索引
 \backmatter
-\printindex
+% 索引: \phantomsection 必须置于 \printindex 之前, 否则其锚点会落在索引末尾,
+% 导致 "Index" 书签跳到索引最后一页而非起始页。
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{Index}
+\printindex
 \end{document}

@@ -14,8 +14,7 @@ Since $A$ is Noetherian, $\mathfrak{a}$ has a minimal primary decomposition $\ma
 Conversely, if $\mathfrak{a} = \prod \mathfrak{q}_i$, the same argument shows that $\mathfrak{a} = \bigcap \mathfrak{q}_i$; this is a minimal primary decomposition of $\mathfrak{a}$, in which each $\mathfrak{q}_i$ is an isolated primary component, and is therefore unique by the 2nd uniqueness theorem.
 \end{proof}
 
-\section*{Discrete Valuation Rings}
-\addcontentsline{toc}{section}{Discrete Valuation Rings}
+\subsec{Discrete Valuation Rings}
 Let $K$ be a field. A \emph{discrete valuation} on $K$ is a mapping $v$ of $K^*$ onto $\Z$ (where $K^* = K - \{0\}$ is the multiplicative group of $K$) such that:
 \begin{enumerate}[1)]
     \item $v(xy) = v(x) + v(y)$, i.e., $v$ is a homomorphism;
@@ -73,8 +72,7 @@ v) $\implies$ vi). By remark (B), $\mathfrak{m} \neq \mathfrak{m}^2$, hence ther
 vi) $\implies$ i). Clearly $(x) = \mathfrak{m}$, hence $(x^k) \neq (x^{k+1})$ by remark (B). Hence if $a$ is any non-zero element of $A$, we have $(a) = (x^k)$ for exactly one value of $k$. Define $v(a) = k$ and extend $v$ to $K^*$ by defining $v(ab^{-1}) = v(a) - v(b)$. Check that $v$ is well-defined and is a discrete valuation, and that $A$ is the valuation ring of $v$.
 \end{proof}
 
-\section*{Dedekind Domains}
-\addcontentsline{toc}{section}{Dedekind Domains}
+\subsec{Dedekind Domains}
 \begin{theorem}\label{thm:dedekind-equivalent}
 Let $A$ be a Noetherian domain of dimension one. Then the following are equivalent:
 \begin{enumerate}[i)]
@@ -120,8 +118,7 @@ $K$ is a separable extension of $\Q$ (because the characteristic is zero), hence
 The unique factorization theorem \eqref{cor:dedekind-unique-factorization} was originally proved for rings of integers in algebraic number fields. The uniqueness theorems of Chapter \ref{chapter4} may be regarded as generalizations of this result: prime powers have to be replaced by primary ideals, and products by intersections.
 \end{remark}
 
-\section*{Fractional Ideals}
-\addcontentsline{toc}{section}{Fractional Ideals}
+\subsec{Fractional Ideals}
 Let $A$ be an integral domain, $K$ its field of fractions. An $A$-submodule $M$ of $K$ is a \emph{fractional ideal}\index{Ideal(s)!fractional} of $A$ if $xM \subseteq A$ for some $x \neq 0$ in $A$. In particular, the ``ordinary'' ideals (now called integral ideals) are fractional ideals (take $x = 1$).
 
 Any element $u \in K$ generates a fractional ideal, denoted by $(u)$ or $Au$, and called \emph{principal}. If $M$ is a fractional ideal, the set of all $x \in K$ such that $xM \subseteq A$ is denoted by $(A : M)$.

@@ -4,8 +4,7 @@ In classical algebraic geometry curves were frequently studied by projecting the
 
 We also give a brief treatment of valuations.
 
-\section*{Integral Dependence}
-\addcontentsline{toc}{section}{Integral Dependence}
+\subsec{Integral Dependence}
 Let $B$ be a ring, $A$ a subring of $B$ (so that $1 \in A$). An element $x$ of $B$ is said to be \emph{integral over $A$} if $x$ is a root of a monic polynomial with coefficients in $A$, that is if $x$ satisfies an equation of the form
 \begin{equation}\label{eq:integral-eq}
 x^n + a_1 x^{n-1} + \cdots + a_n = 0 \tag{1}
@@ -110,8 +109,7 @@ ii) Let $x/s \in S^{-1}B$ ($x \in B$, $s \in S$). Then the equation above gives
 which shows that $x/s$ is integral over $S^{-1}A$.
 \end{proof}
 
-\section*{The Going-Up Theorem}
-\addcontentsline{toc}{section}{The Going-Up Theorem}
+\subsec{The Going-Up Theorem}
 
 \begin{proposition}\label{prop:5.7}
 Let $A \subseteq B$ be integral domains, $B$ integral over $A$. Then $B$ is a field if and only if $A$ is a field.
@@ -171,8 +169,7 @@ Let $A \subseteq B$ be rings, $B$ integral over $A$; let $\mathfrak{p}_1 \subset
 By induction we reduce immediately to the case $m = 1$, $n = 2$. Let $\overline{A} = A/\mathfrak{p}_1$, $\overline{B} = B/\mathfrak{q}_1$; then $\overline{A} \subseteq \overline{B}$, and $\overline{B}$ is integral over $\overline{A}$ by \eqref{prop:5.6}. Hence, by \eqref{thm:5.10}, there exists a prime ideal $\overline{\mathfrak{q}}_2$ of $\overline{B}$ such that $\overline{\mathfrak{q}}_2 \cap \overline{A} = \overline{\mathfrak{p}}_2$, the image of $\mathfrak{p}_2$ in $\overline{A}$. Lift back $\overline{\mathfrak{q}}_2$ to $B$ and we have a prime ideal $\mathfrak{q}_2$ with the required properties.
 \end{proof}
 
-\section*{Integrally Closed Integral Domains. The Going-Down Theorem}
-\addcontentsline{toc}{section}{Integrally Closed Integral Domains. The Going-Down Theorem}
+\subsec{Integrally Closed Integral Domains. The Going-Down Theorem}
 
 \eqref{prop:5.6} can be sharpened:
 
@@ -267,8 +264,7 @@ Multiplying this equation by $a_0^{r-1}$, we see that $a_0 v = u$ is integral ov
 Let $T$ denote trace (from $L$ to $K$). Since $L/K$ is separable, the bilinear form $(x, y) \mapsto T(xy)$ on $L$ (considered as a vector space over $K$) is non-degenerate, and hence we have a dual basis $v_1, \ldots, v_n$ of $L$ over $K$, defined by $T(u_i v_j) = \delta_{ij}$. Let $x \in B$, say $x = \sum x_i v_i$ ($x_i \in K$). We have $x u_i \in B$ (since $u_i \in B$) and therefore $T(x u_i) \in A$ by \eqref{prop:5.15} (for the trace of an element is a multiple of one of the coefficients in the minimal polynomial). But $T(x u_i) = \sum_j T(x_j u_i v_j) = \sum_j x_j T(u_i v_j) = \sum_j x_j \delta_{ij} = x_i$, hence $x_i \in A$. Consequently $B \subseteq \sum_i A v_i$.
 \end{proof}
 
-\section*{Valuation Rings}
-\addcontentsline{toc}{section}{Valuation Rings}
+\subsec{Valuation Rings}
 
 Let $B$ be an integral domain, $K$ its field of fractions. $B$ is a \emph{valuation ring}\index{Ring!valuation}\index{Valuation ring} of $K$ if, for each $x \neq 0$, either $x \in B$ or $x^{-1} \in B$ (or both).
 
